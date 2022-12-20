@@ -1,0 +1,214 @@
+body {
+  align-items: center;
+  place-content: center;
+  text-align: center;
+  background-color: #faf8f1;
+}
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.box {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  bottom: 10%;
+  background-color: #e5ba73;
+  border-radius: 30px;
+  animation: open 1.5s;
+}
+.butdiv {
+  position: relative;
+  width: 80%;
+  height: 52%;
+  top: 39%;
+  left: 10%;
+}
+.butsocial {
+  position: relative;
+  padding: 25px;
+  margin: 25px;
+  font-size: 155%;
+  border-radius: 30%;
+  top: 4%;
+  background: #ffffffed;
+  border-color: transparent;
+  transition: top 0.5s;
+  color: rgb(67, 53, 0);
+}
+.butsocial:hover {
+  top: 2%;
+  cursor: pointer;
+}
+.titlet {
+  position: relative;
+  top: 10%;
+  content: normal;
+}
+h1 {
+  display: inline-block;
+  margin: -0.15%;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(67, 53, 0);
+  font-size: 230%;
+}
+/*////////////HOVER COLOR////////////*/
+
+.butdiv .fb:hover .butsocial {
+  color: white;
+  background-color: #4267b2;
+}
+.butdiv .tt:hover .butsocial {
+  color: white;
+  background-color: black;
+}
+.butdiv .ig:hover .butsocial {
+  background-color: #c13584;
+  color: white;
+  background: rgb(193, 53, 132);
+  background: -moz-linear-gradient(
+    315deg,
+    rgba(193, 53, 132, 1) 47%,
+    rgba(225, 48, 108, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    315deg,
+    rgba(193, 53, 132, 1) 47%,
+    rgba(225, 48, 108, 1) 100%
+  );
+  background: linear-gradient(
+    315deg,
+    rgba(193, 53, 132, 1) 47%,
+    rgba(225, 48, 108, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c13584",endColorstr="#e1306c",GradientType=1);
+}
+.butdiv .tw:hover .butsocial {
+  background-color: #1da1f2;
+  color: white;
+}
+/*/////////Button/////////*/
+/*/
+.butdiv .fb .butsocial {
+  animation: openbut 2.1s;
+}
+.butdiv .tt .butsocial {
+  animation: openbut 2.2s;
+}
+.butdiv .ig .butsocial {
+  animation: openbut 2.3s;
+}
+.butdiv .tw .butsocial {
+  animation: openbut 2.4s;
+}
+/*/
+.butdiv .fb .butsocial {
+  animation: openbut 2.4s;
+}
+.butdiv .tt .butsocial {
+  animation: openbut 2.3s;
+}
+.butdiv .ig .butsocial {
+  animation: openbut 2.2s;
+}
+.butdiv .tw .butsocial {
+  animation: openbut 2.1s;
+}
+/*/////////Title/////////*/
+.mt {
+  animation: opentr 2.41s;
+}
+.at {
+  animation: opentr 2.3s;
+}
+.nt {
+  animation: opentr 2.2s;
+}
+.ht {
+  animation: opentr 2.1s;
+}
+.ct {
+  animation: opentr 2s;
+}
+.htt {
+  animation: opentr 1.9s;
+}
+.ut {
+  animation: opentr 1.8s;
+}
+/*/////////Animation/////////*/
+/*/
+@keyframes openbut {
+  0% {
+    top: 1000%;
+    left: 100%;
+  }
+  50% {
+    top: 400%;
+    left: 400%;
+  }
+  100% {
+    top: 4%;
+    left: 0%;
+  }
+}
+/*/
+@keyframes openbut {
+  0% {
+    background: #e5ba73;
+    color: #e5ba73;
+  }
+  50% {
+    background: #e5ba73;
+    color: #e5ba73;
+  }
+  100% {
+    background: #ffffffed;
+    color: rgb(67, 53, 0);
+  }
+}
+/*/
+@keyframes opentr {
+  0% {
+    left: -250%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+/*/
+@keyframes opentr {
+  0% {
+    color: #e5ba73;
+  }
+  50% {
+    color: #e5ba73;
+  }
+  100% {
+    color: rgb(76, 59, 1);
+  }
+}
+@keyframes open {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 10%;
+  }
+}
