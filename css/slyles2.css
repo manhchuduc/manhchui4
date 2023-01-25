@@ -4,17 +4,16 @@ body {
 }
 .button:hover,
 a:hover {
-  cursor: url("/if/cursor/link.cur"), auto;
+  cursor: url("https://xn--ss-8ja.vn/theme/GIF/mouse-f2.png"), auto;
 }
 body {
   /* background: #faf8f1; */
-  background: url(/if/img/bg.png);
+  background: url(/if/bgg.jpg);
   text-align: center;
 }
 .box {
   position: relative;
-  /* background: #e5ba73; */
-  background: rgba(255, 255, 255, 0.4);
+  background-color: #e5ba73;
   text-align: center;
   width: 80%;
   height: 80%;
@@ -22,7 +21,7 @@ body {
   left: 10%;
   border-radius: 20px;
   animation: start 1.5s;
-  box-shadow: 5px 5px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .top {
   position: relative;
@@ -44,8 +43,6 @@ body {
 .title {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   position: relative;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
   color: white;
 }
 .title:hover {
