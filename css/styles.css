@@ -1,14 +1,14 @@
 html,
 body {
-  cursor: url("/if/cursor/pointer.cur"), auto;
+  cursor: url("/cursor/pointer.cur"), auto;
 }
 .button:hover,
 a:hover {
-  cursor: url("/if/cursor/link.cur"), auto;
+  cursor: url("/cursor/link.cur"), auto;
 }
 body {
   /* background: #faf8f1; */
-  background: url(/if/img/bg.png);
+  background: url(/img/bg.png);
   text-align: center;
 }
 .box {
@@ -194,13 +194,13 @@ body {
 }
 @font-face {
   font-family: manhchu;
-  src: url(/if/font/KAIGE.ttf);
+  src: url(/font/KAIGE.ttf);
 }
 @font-face {
   font-family: manhchu1;
-  src: url(/if/font/Kavoon-Regular.ttf);
+  src: url(/font/Kavoon-Regular.ttf);
 }
 @font-face {
   font-family: manhchu2;
-  src: url(/if/font/Pacifico-Regular.ttf);
+  src: url(/font/Pacifico-Regular.ttf);
 }
