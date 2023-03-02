@@ -1,8 +1,9 @@
 body {
 	background-image: linear-gradient(to right, #ffffff69, #ffffff69),
 		url("/photos/bg.png");
-	display: grid;
-	place-items: center;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
 	cursor: url("/cursor/pointer.cur"), auto;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -21,7 +22,7 @@ a:hover {
 	cursor: url("/cursor/link.cur"), auto;
 }
 .box {
-	position: absolute;
+	position: relative;
 	width: 70%;
 	height: 70%;
 	margin: 0;
