@@ -21,7 +21,7 @@ a:hover {
 	cursor: url("/cursor/link.cur"), auto;
 }
 .box {
-	position: fixed;
+	position: absolute;
 	width: 70%;
 	height: 70%;
 	margin: 0;
