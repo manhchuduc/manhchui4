@@ -2,8 +2,8 @@ body {
 	background-image: linear-gradient(to right, #ffffff69, #ffffff69),
 		url("/photos/bg.png");
 	display: flex;
-  	align-items: center;
-  	justify-content: center;
+	align-items: center;
+	justify-content: center;
 	cursor: url("/cursor/pointer.cur"), auto;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -13,7 +13,6 @@ body {
 	user-select: none;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
-	overflow-y: scroll;
 }
 a {
 	text-decoration: none;
@@ -28,6 +27,7 @@ a:hover {
 	margin: 0;
 	background: whitesmoke;
 	border-radius: 30px;
+	animation: start 0.5s;
 }
 .content {
 	position: absolute;
@@ -52,6 +52,7 @@ a:hover {
 	align-items: flex-start;
 	justify-content: flex-start;
 	margin: 0px 20px;
+	animation: insidestart 1s;
 }
 .name {
 	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -62,6 +63,7 @@ a:hover {
 	border-radius: 100%;
 	width: 90px;
 	height: 90px;
+	animation: insidestart 1s;
 }
 .decrition {
 	font-family: Courier, monospace;
@@ -90,6 +92,11 @@ a:hover {
 	color: #000;
 	border-radius: 20px;
 	font-size: 145%;
+	transition: 0.4s;
+	animation: insidestart 1s;
+}
+.button:hover {
+	scale: 1.05;
 }
 .fb:hover {
 	color: white;
@@ -113,4 +120,26 @@ a:hover {
 	color: white;
 	text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
 	background: black;
+}
+@keyframes start {
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 1;
+	}
+}
+@keyframes insidestart {
+	0% {
+		scale: 0;
+	}
+	50% {
+		scale: 0;
+	}
+	65% {
+		scale: 1;
+	}
+	100% {
+		scale: 1;
+	}
 }
