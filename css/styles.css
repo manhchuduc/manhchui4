@@ -80,20 +80,19 @@ a:hover {
 }
 .name {
 	margin: 5px;
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-	font-size: 130%;
+	font-family: title;
+	font-size: 150%;
 }
 @media screen and (min-width: 816px) {
 	.name {
 		margin-top: 15px;
 	}
 }
-.decrition {
-	font-family: Courier, monospace;
+.description {
+	font-family: description;
 	margin: 1px 5px;
 	font-size: 90%;
-	max-lines: 3;
+	font-style: italic;
 }
 .buttons {
 	position: relative;
@@ -168,4 +167,12 @@ a:hover {
 	100% {
 		scale: 1;
 	}
+}
+@font-face {
+	font-family: title;
+	src: url(/fonts/TiltNeon-Regular-VariableFontttf);
+}
+@font-face {
+	font-family: description;
+	src: url(/fonts/CutiveMono-Regular.ttf);
 }
