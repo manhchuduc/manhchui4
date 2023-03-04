@@ -203,7 +203,7 @@ a:hover {
 /* Fonts */
 @font-face {
 	font-family: title;
-	src: url(/fonts/TiltNeon-Regular-VariableFontttf);
+	src: url(/fonts/TiltNeon-Regular-VariableFont.ttf);
 }
 @font-face {
 	font-family: description;
