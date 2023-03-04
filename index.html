@@ -19,7 +19,15 @@
 		></script>
 		<script src="js/script.js"></script>
 	</head>
-	<body>
+	<body id="body">
+		<script>
+			let ele = document.getElementById("body");
+			var check = localStorage.getItem("darkmode");
+			if (check) {
+				let ele = document.getElementById("body");
+				ele.classList.add("dark");
+			}
+		</script>
 		<div class="box">
 			<div class="content">
 				<div class="tools">
@@ -28,7 +36,12 @@
 					</span>
 				</div>
 				<div class="profile">
-					<img src="photos/avatar.png" alt="Avatar" class="avatar" />
+					<img
+						src="photos/avatar.png"
+						alt="Avatar"
+						class="avatar"
+						onclick="rotate()"
+					/>
 					<div class="info">
 						<h1 class="name">Chu Duc Manh</h1>
 						<p class="description">

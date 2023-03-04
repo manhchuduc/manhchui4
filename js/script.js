@@ -19,7 +19,19 @@ document.onkeydown = function (e) {
 		return false;
 	}
 };
+
 function myFunction() {
 	var element = document.body;
-	element.classList.toggle("dark");
+	var check = localStorage.getItem("darkmode");
+	if (check) {
+		element.classList.remove("dark");
+		localStorage.removeItem("darkmode");
+	} else {
+		element.classList.add("dark");
+		localStorage.setItem("darkmode", "True");
+	}
+}
+function rotate() {
+	var element = document.body;
+	element.classList.toggle("rotate");
 }

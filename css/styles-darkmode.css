@@ -1,18 +1,20 @@
 .dark {
-	background-image: linear-gradient(to right, #00000069, #00000069),
-		url("/photos/bg.png");
+	background-image: url("/photos/bg.png");
+}
+.dark::before {
+	background: #00000069;
 }
 .dark .box {
 	background: #191919;
 }
 .dark .button {
 	color: #fff;
-	background: #0e0e0e;
+	background: #0b0b0b;
 }
 .dark .darkmode {
-	background: #0e0e0e;
+	background: #0b0b0b;
 	color: #fff;
-	transform: rotate(180deg);
+	transform: rotate(720deg);
 }
 .dark .name {
 	color: #fff;
