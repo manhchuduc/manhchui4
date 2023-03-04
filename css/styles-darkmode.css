@@ -11,10 +11,16 @@
 	color: #fff;
 	background: #0b0b0b;
 }
-.dark .darkmode {
+.dark .sun,
+.dark .moon {
 	background: #0b0b0b;
 	color: #fff;
-	transform: rotate(720deg);
+}
+.dark .sun {
+	scale: 0;
+}
+.dark .moon {
+	scale: 1;
 }
 .dark .name {
 	color: #fff;

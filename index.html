@@ -21,18 +21,16 @@
 	</head>
 	<body id="body">
 		<script>
-			let ele = document.getElementById("body");
-			var check = localStorage.getItem("darkmode");
-			if (check) {
-				let ele = document.getElementById("body");
-				ele.classList.add("dark");
-			}
+			check();
 		</script>
 		<div class="box">
 			<div class="content">
 				<div class="tools">
-					<span class="darkmode" onclick="myFunction()">
-						<i class="fa-solid fa-circle-half-stroke"></i>
+					<span class="moon" onclick="myFunction()"
+						><i class="fa-solid fa-moon"></i
+					></span>
+					<span class="sun" onclick="myFunction()">
+						<i class="fa-solid fa-sun"></i>
 					</span>
 				</div>
 				<div class="profile">

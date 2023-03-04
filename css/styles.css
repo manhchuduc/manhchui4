@@ -1,6 +1,10 @@
+*::-webkit-scrollbar {
+	width: 0 !important;
+	display: none;
+}
 body {
 	background-image: url("/photos/bg.png");
-	transition: 0.7s;
+	transition: 0.5s;
 
 	display: flex;
 	align-items: center;
@@ -13,8 +17,6 @@ body {
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
 }
 body::before {
 	position: absolute;
@@ -22,7 +24,7 @@ body::before {
 	background: #ffffff69;
 	width: 100%;
 	height: 100%;
-	transition: 0.7s;
+	transition: 0.5s;
 }
 a {
 	text-decoration: none;
@@ -40,13 +42,16 @@ a:hover {
 	margin: 0;
 	background: #f5f5f5;
 	border-radius: 20px;
-	transition: 0.7s;
+	transition: 0.5s;
 	animation: start 0.5s;
 }
 .content {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	overflow: auto;
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
 
 	display: flex;
 	align-items: center;
@@ -60,8 +65,9 @@ a:hover {
 
 	display: flex;
 }
-.darkmode {
-	position: relative;
+.sun,
+.moon {
+	position: absolute;
 	height: 9.3vw;
 	width: 9.3vw;
 	max-width: 45px;
@@ -70,16 +76,21 @@ a:hover {
 	color: #000;
 	border-radius: 100%;
 	font-size: 120%;
-	transition: 0.7s, transform 0.6s;
-	animation: insidestart 1s;
+	transition: 0.5s;
+	animation: insidestart 1s, scale 0.1s;
 	margin: 20px;
+	visibility: visible;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+.moon {
+	scale: 0;
+}
 .profile {
 	width: 90%;
+	margin-top: 20px;
 
 	display: flex;
 	justify-content: center;
@@ -113,19 +124,20 @@ a:hover {
 	margin: 5px;
 	font-family: title;
 	font-size: 150%;
-	transition: 0.7s;
+	transition: 0.5s;
 }
 .description {
 	font-family: description;
 	margin: 1px 5px;
 	font-size: 90%;
 	font-style: italic;
-	transition: 0.7s;
+	transition: 0.5s;
 }
 .buttons {
 	position: relative;
 	height: 65%;
 	width: 85%;
+	min-height: 150px;
 	max-width: 450px;
 	margin-top: 10px;
 
@@ -143,7 +155,7 @@ a:hover {
 	color: #000;
 	border-radius: 20px;
 	font-size: 145%;
-	transition: color 0.2s, background 0.2s, scale 0.2s, text-shadow 0.2s;
+	transition: color 0.3s, background 0.3s, scale 0.2s, text-shadow 0.2s;
 	animation: insidestart 1s;
 
 	display: flex;

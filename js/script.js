@@ -19,7 +19,14 @@ document.onkeydown = function (e) {
 		return false;
 	}
 };
-
+function check() {
+	let ele = document.getElementById("body");
+	var check = localStorage.getItem("darkmode");
+	if (check) {
+		let ele = document.getElementById("body");
+		ele.classList.add("dark");
+	}
+}
 function myFunction() {
 	var element = document.body;
 	var check = localStorage.getItem("darkmode");
