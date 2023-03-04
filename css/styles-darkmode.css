@@ -1,0 +1,22 @@
+.dark {
+	background-image: linear-gradient(to right, #00000069, #00000069),
+		url("/photos/bg.png");
+}
+.dark .box {
+	background: #191919;
+}
+.dark .button {
+	color: #fff;
+	background: #0e0e0e;
+}
+.dark .darkmode {
+	background: #0e0e0e;
+	color: #fff;
+	transform: rotate(180deg);
+}
+.dark .name {
+	color: #fff;
+}
+.dark .description {
+	color: #fff;
+}

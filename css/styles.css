@@ -1,6 +1,8 @@
 body {
 	background-image: linear-gradient(to right, #ffffff69, #ffffff69),
 		url("/photos/bg.png");
+	transition: 0.5s;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -23,10 +25,10 @@ a:hover {
 }
 .box {
 	position: relative;
-	width: 80%;
-	height: 80%;
+	width: 80vw;
+	height: 80vh;
 	margin: 0;
-	background: whitesmoke;
+	background: #f5f5f5;
 	border-radius: 30px;
 	animation: start 0.5s;
 }
@@ -40,9 +42,33 @@ a:hover {
 	justify-content: flex-start;
 	flex-direction: column;
 }
+.tools {
+	position: relative;
+	height: 15%;
+	width: 100%;
+
+	display: flex;
+}
+.darkmode {
+	position: relative;
+	height: 9.3vw;
+	width: 9.3vw;
+	max-width: 45px;
+	max-height: 45px;
+	background: #fff;
+	color: #000;
+	border-radius: 100%;
+	font-size: 120%;
+	transition: 0.2s;
+	animation: insidestart 1s;
+	margin: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .profile {
 	width: 90%;
-	margin-top: 15%;
 
 	display: flex;
 	justify-content: center;
@@ -58,12 +84,6 @@ a:hover {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
-}
-@media screen and (max-width: 816px) {
-	.info {
-		align-items: center;
-		text-align: center;
-	}
 }
 .avatar {
 	border-radius: 100%;
@@ -82,17 +102,14 @@ a:hover {
 	margin: 5px;
 	font-family: title;
 	font-size: 150%;
-}
-@media screen and (min-width: 816px) {
-	.name {
-		margin-top: 15px;
-	}
+	transition: 0.2s;
 }
 .description {
 	font-family: description;
 	margin: 1px 5px;
 	font-size: 90%;
 	font-style: italic;
+	transition: 0.2s;
 }
 .buttons {
 	position: relative;
@@ -122,9 +139,11 @@ a:hover {
 	align-items: center;
 	justify-content: center;
 }
+/* Hover */
 .button:hover {
 	scale: 1.09;
 }
+/* Hover color */
 .fb:hover {
 	color: white;
 	text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
@@ -146,6 +165,19 @@ a:hover {
 	text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
 	background: black;
 }
+/* Center/Left */
+@media screen and (max-width: 816px) {
+	.info {
+		align-items: center;
+		text-align: center;
+	}
+}
+@media screen and (min-width: 816px) {
+	.name {
+		margin-top: 15px;
+	}
+}
+/* Animation */
 @keyframes start {
 	0% {
 		scale: 0;
@@ -168,6 +200,7 @@ a:hover {
 		scale: 1;
 	}
 }
+/* Fonts */
 @font-face {
 	font-family: title;
 	src: url(/fonts/TiltNeon-Regular-VariableFontttf);
