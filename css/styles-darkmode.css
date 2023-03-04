@@ -18,9 +18,11 @@
 }
 .dark .sun {
 	scale: 0;
+	visibility: hidden;
 }
 .dark .moon {
 	scale: 1;
+	visibility: visible;
 }
 .dark .name {
 	color: #fff;
