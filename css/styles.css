@@ -87,6 +87,7 @@ a:hover {
 }
 .moon {
 	scale: 0;
+	visibility: hidden;
 }
 .profile {
 	width: 90%;
