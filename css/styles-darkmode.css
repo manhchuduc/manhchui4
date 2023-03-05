@@ -1,27 +1,27 @@
 .dark {
-	background-image: url("/photos/bg.png");
+	background-image: url("/photos/dark.jpg");
 }
 .dark::before {
-	background: #00000069;
+	background: #0000009e;
 }
 .dark .box {
-	background: #191919;
+	background: #363333;
 }
 .dark .button {
-	color: #fff;
-	background: #0b0b0b;
+	color: #cccaca;
+	background: #272121;
 }
 .dark .sun,
 .dark .moon {
-	background: #0b0b0b;
-	color: #fff;
+	background: #272121;
+	color: #865dff;
 }
 .dark .sun {
-	scale: 0;
+	opacity: 0;
 	visibility: hidden;
 }
 .dark .moon {
-	scale: 1;
+	opacity: 1;
 	visibility: visible;
 }
 .dark .name {

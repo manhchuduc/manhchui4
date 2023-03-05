@@ -20,10 +20,9 @@ document.onkeydown = function (e) {
 	}
 };
 function check() {
-	let ele = document.getElementById("body");
 	var check = localStorage.getItem("darkmode");
 	if (check) {
-		let ele = document.getElementById("body");
+		let ele = document.body;
 		ele.classList.add("dark");
 	}
 }
@@ -39,6 +38,6 @@ function myFunction() {
 	}
 }
 function rotate() {
-	var element = document.body;
+	var element = document.getElementById("avatar");
 	element.classList.toggle("rotate");
 }
