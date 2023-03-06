@@ -20,14 +20,6 @@ body {
 	-o-user-select: none;
 	user-select: none;
 }
-@keyframes wave {
-	0% {
-		background-position: left center;
-	}
-	100% {
-		background-position: right center;
-	}
-}
 body::before {
 	position: absolute;
 	content: "";
@@ -235,6 +227,14 @@ a:hover {
 	}
 }
 /* Animation */
+@keyframes wave {
+	0% {
+		background-position: left center;
+	}
+	100% {
+		background-position: right center;
+	}
+}
 @keyframes start {
 	0% {
 		scale: 0;
