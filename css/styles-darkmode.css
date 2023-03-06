@@ -1,8 +1,8 @@
 .dark {
-	background-image: url("/photos/dark.jpg");
+	background-image: url("/SVG/wave-dark.svg");
 }
 .dark::before {
-	background: #0000009e;
+	background: #00000075;
 }
 .dark .box {
 	background: #363333;
