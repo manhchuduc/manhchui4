@@ -19,6 +19,18 @@ document.onkeydown = function (e) {
 		return false;
 	}
 };
+function fb() {
+	window.open("https://www.facebook.com/100090568388319");
+}
+function tt() {
+	window.open("https://www.tiktok.com/@m_a_n_h_c_h_u");
+}
+function ig() {
+	window.open("https://www.instagram.com/chumanhhh");
+}
+function gh() {
+	window.open("https://github.com/manhchuduc");
+}
 function check() {
 	var check = localStorage.getItem("darkmode");
 	if (check) {
