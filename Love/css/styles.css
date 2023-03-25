@@ -1,0 +1,115 @@
+::-webkit-scrollbar {
+	width: 0 !important;
+	display: none;
+}
+body {
+	background: #efe1f0;
+	font-family: "Segoe UI", sans-serif;
+	color: #f5f5f5;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 90%;
+	max-height: 640px;
+	width: 80%;
+	max-width: 900px;
+}
+.title {
+	position: relative;
+	font-size: 250%;
+	height: 5%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup {
+	position: relative;
+	height: 80%;
+	width: 100%;
+	background: #f0bcca;
+	border-radius: 10px;
+	overflow: auto;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+img {
+	width: 12vw;
+	max-width: 70px;
+	height: 12vw;
+	max-height: 70px;
+	border-radius: 25px;
+	margin: 0px 10px;
+}
+.nameandavt {
+	margin: 15px 0px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+.name {
+	margin: 15px 0px 5px 0px;
+	font-size: 145%;
+}
+.heart {
+	color: #f70707;
+}
+.sn {
+	margin: 1px 0px 0px 0px;
+	font-size: 95%;
+	font-style: italic;
+}
+.day {
+	margin: 0px 50px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.description {
+	margin: 0;
+	font-size: 105%;
+}
+.small {
+	margin-top: 10px;
+	font-size: 90%;
+	font-style: italic;
+	font-weight: bold;
+}
+.days {
+	margin: 5px 0px;
+
+	display: flex;
+	justify-items: center;
+	align-items: center;
+}
+#day {
+	font-size: 180%;
+	margin: 0px 3px;
+}
+@media screen and (max-width: 1065px) {
+	.main {
+		width: 100%;
+	}
+	.day {
+		width: 100%;
+	}
+}
