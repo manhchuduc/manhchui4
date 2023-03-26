@@ -1,4 +1,4 @@
-var ngayyeu = "2022-11-2 13:30:00";
+var ngayyeu = "11/02/2022 13:30:00";
 document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.onkeydown = function (e) {
 	if (e.keyCode == 123) {
