@@ -31,6 +31,9 @@ function ig() {
 function gh() {
 	window.open("https://github.com/manhchuduc");
 }
+function lovepage() {
+	window.open("love");
+}
 function check() {
 	var check = localStorage.getItem("darkmode");
 	if (check) {
@@ -38,7 +41,7 @@ function check() {
 		ele.classList.add("dark");
 	}
 }
-function myFunction() {
+function darkmode() {
 	var element = document.body;
 	var check = localStorage.getItem("darkmode");
 	if (check) {
@@ -49,7 +52,7 @@ function myFunction() {
 		localStorage.setItem("darkmode", "True");
 	}
 }
-function rotate() {
+function avt() {
 	var element = document.getElementById("avatar");
 	element.classList.toggle("rotate");
 }
