@@ -2,6 +2,14 @@
 	width: 0 !important;
 	display: none;
 }
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
 body {
 	background: #efe1f0;
 	font-family: "Segoe UI", sans-serif;
@@ -68,6 +76,10 @@ img {
 	margin: 15px 0px 5px 0px;
 	font-size: 145%;
 }
+#clock {
+	font-size: 120%;
+	font-style: normal;
+}
 .heart {
 	color: #f70707;
 }
@@ -101,9 +113,13 @@ img {
 	justify-items: center;
 	align-items: center;
 }
-#day {
+counter {
+	font-weight: bold;
 	font-size: 180%;
 	margin: 0px 3px;
+}
+.date {
+	font-size: 130%;
 }
 @media screen and (max-width: 1065px) {
 	.main {

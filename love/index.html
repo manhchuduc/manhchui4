@@ -3,7 +3,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Day love</title>
 		<link rel="stylesheet" href="css/styles.css" />
 		<script
 			src="https://kit.fontawesome.com/6c218960be.js"
@@ -23,11 +23,12 @@
 				</div>
 				<div class="day">
 					<p class="description">Đã bên nhau được</p>
-					<div class="days">
-						<h1 id="day">
+					<div class="days" onclick="change()">
+						<counter id="day" class="counter">
 							0 <i class="fa-solid fa-heart fa-bounce heart"></i> Ngày
-						</h1>
+						</counter>
 					</div>
+					<p class="description small" id="clock">00:00:00</p>
 					<p class="description small heart" id="start">00-00-0000</p>
 				</div>
 				<div class="main">
