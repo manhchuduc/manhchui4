@@ -9,6 +9,8 @@
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+
+	margin: 0;
 }
 body {
 	background: url(../images/bg.jpg);
@@ -16,6 +18,12 @@ body {
 	font-family: manh;
 	color: #f5f5f5;
 	margin: 0;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 wave {
 	background: url(../svg/wave.svg);
@@ -34,22 +42,10 @@ wave {
 		background-position: right;
 	}
 }
-.container {
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
-	margin: 0;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	text-align: center;
-}
 .container .top {
 	position: relative;
 	background: transparent;
-	height: 55%;
+	height: 50%;
 	width: 100%;
 	max-width: 500px;
 
@@ -151,7 +147,7 @@ wave {
 	max-width: 80px;
 	height: 20vw;
 	max-height: 80px;
-	background: #fca7b5;
+	background: #f193a3;
 	border-radius: 20px;
 	margin: 6px;
 	font-weight: 600;
@@ -161,16 +157,18 @@ wave {
 	align-items: center;
 }
 .container .top .calender #clock {
-	margin: 2px 6px 6px 6px;
+	margin: 3px 6px 6px 6px;
 	font-weight: 650;
+	color: #fca7b5;
 
 	display: flex;
 }
 .container .top .calender #clock .clock {
-	background: #fca7b5;
+	background: #f193a3;
 	border-radius: 8px;
-	margin: 0px 2.5px 0px 2.5px;
-	border: #fca7b5 solid 2px;
+	margin: 0px 3px 0px 3px;
+	border: #f193a3 solid 3px;
+	color: #ffffff;
 	font-family: typewriter;
 	font-weight: 600;
 }
@@ -179,12 +177,12 @@ wave {
 }
 .container .bottom {
 	position: relative;
-	height: 45%;
+	height: 50%;
 	width: 100%;
 
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 }
 .container .bottom .main {
 	position: relative;

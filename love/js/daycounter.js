@@ -1,25 +1,25 @@
 var ngayyeu = "11/02/2022 13:30:00"; // MM/DD/YYYY h/m/s
-// document.addEventListener("contextmenu", (event) => event.preventDefault());
-// document.onkeydown = function (e) {
-// 	if (e.keyCode == 123) {
-// 		return false;
-// 	}
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+document.onkeydown = function (e) {
+	if (e.keyCode == 123) {
+		return false;
+	}
 
-// 	// disable I key
-// 	if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-// 		return false;
-// 	}
+	// disable I key
+	if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+		return false;
+	}
 
-// 	// disable J key
-// 	if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-// 		return false;
-// 	}
+	// disable J key
+	if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+		return false;
+	}
 
-// 	// disable U key
-// 	if (e.ctrlKey && e.keyCode == 85) {
-// 		return false;
-// 	}
-// };
+	// disable U key
+	if (e.ctrlKey && e.keyCode == 85) {
+		return false;
+	}
+};
 const get_day_of_time = (d1, d2) => {
 	let ms1 = d1.getTime();
 	let ms2 = d2.getTime();
@@ -87,9 +87,7 @@ function process() {
 	let ele = document.getElementById("process");
 	let bg = document.getElementById("bg");
 
-	let maxProcess = time % 100;
-	speed = parseInt(maxProcess / 7);
-	valueProcess = 0;
+	let valueProcess = 0;
 	count = 0;
 
 	let process = setInterval(() => {
@@ -98,7 +96,6 @@ function process() {
 			"conic-gradient(transparent " + valueProcess * 3.6 + "deg, #fff 0deg)";
 		if (valueProcess >= 100) {
 			count++;
-			console.log(count);
 			time -= 100;
 			if (count === 1) {
 				bg.style.background = "#FFD6F3";
@@ -120,28 +117,25 @@ function process() {
 		if (valueProcess === time) {
 			clearInterval(process);
 		}
-	}, speed);
+	}, 5);
 }
 process();
 function calander() {
 	let when = new Date(ngayyeu);
 	let todate = new Date();
-	let time = get_day_of_time(when, todate);
-	time--;
+	let day = Math.ceil((todate - when) / 1000 / 24 / 60 / 60) - 1;
 
 	let yearele = document.getElementById("year");
 	monthele = document.getElementById("month");
 	weekele = document.getElementById("week");
 	dayele = document.getElementById("day");
 
-	let year = time / 365;
-	year = parseInt(year);
-	let month = time / 30;
-	month = parseInt(month);
-	let day = time % 30;
-	let week = day / 7;
-	week = parseInt(week);
-	day = day - week * 7;
+	year = Math.floor(day / 365);
+	day -= year * 365;
+	month = Math.floor(day / 30);
+	day -= month * 30;
+	week = Math.floor(day / 7);
+	day -= week * 7;
 
 	year = year + "<br>Năm</br>";
 	month = month + "<br>Tháng</br>";
@@ -215,5 +209,5 @@ function dayruner() {
 		if (day == time) {
 			clearInterval(days);
 		}
-	}, 1);
+	}, 5);
 }
