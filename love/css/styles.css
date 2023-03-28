@@ -26,13 +26,13 @@ body {
 	text-align: center;
 }
 wave {
+	position: absolute;
 	background: url(../svg/wave.svg);
 	background-position: left;
-	position: absolute;
+	width: 100%;
 	height: 300px;
-	width: 100vw;
 	bottom: 0px;
-	animation: wave 60s linear 0s infinite alternate-reverse none;
+	animation: wave 30s linear 0s infinite alternate none;
 }
 @keyframes wave {
 	0% {
@@ -128,10 +128,6 @@ wave {
 .container .top .calender {
 	position: absolute;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-end;
 	transition: 0.5s;
 }
 .container .top .calender .date {
@@ -147,7 +143,7 @@ wave {
 	max-width: 80px;
 	height: 20vw;
 	max-height: 80px;
-	background: #f193a3;
+	background: #d293f1;
 	border-radius: 20px;
 	margin: 6px;
 	font-weight: 600;
@@ -156,21 +152,41 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
+.container .top .calender #start {
+	position: absolute;
+	left: 0px;
+	margin: 3px 6px 6px 6px;
+	background: #0000002a;
+	border: #0000002a solid 3px;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 90%;
+	font-family: typewriter;
+	font-weight: 600;
+}
 .container .top .calender #clock {
+	left: 0px;
 	margin: 3px 6px 6px 6px;
 	font-weight: 650;
-	color: #fca7b5;
+	color: #f39fd8;
 
 	display: flex;
+	justify-content: flex-end;
 }
 .container .top .calender #clock .clock {
-	background: #f193a3;
-	border-radius: 8px;
+	width: 4fr;
+	height: 4fr;
+	background: #f39fd8;
 	margin: 0px 3px 0px 3px;
-	border: #f193a3 solid 3px;
+	border: #f39fd8 solid 3px;
+	border-radius: 100%;
 	color: #ffffff;
 	font-family: typewriter;
 	font-weight: 600;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .container .top .calender #clock .clock br {
 	font-family: manh;
@@ -193,14 +209,9 @@ wave {
 	justify-content: center;
 }
 .container .bottom .heartcenter {
-	color: #ff0000;
+	color: #fd2828;
 	font-size: 300%;
 	margin: 0px 29px;
-}
-.container .bottom #start {
-	color: #ff0000;
-	font-family: typewriter;
-	font-weight: 600;
 }
 .container .bottom .main .main1,
 .container .bottom .main .main2 {
@@ -221,10 +232,12 @@ wave {
 }
 .container .bottom .main .name {
 	font-size: 130%;
+	margin: 20px 0px 0px 10px;
 }
 .container .bottom .main .sn {
 	font-family: typewriter;
 	font-weight: 600;
+	font-size: 110%;
 }
 
 .hide {
