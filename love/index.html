@@ -3,7 +3,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Day love</title>
+		<title>Days love</title>
 		<link rel="stylesheet" href="css/styles.css" />
 		<script
 			src="https://kit.fontawesome.com/6c218960be.js"
@@ -11,32 +11,48 @@
 		></script>
 	</head>
 	<body>
+		<wave></wave>
 		<div class="container">
-			<h1 class="title">Love Days</h1>
-			<div class="popup">
+			<div class="top">
+				<div class="dayCount" id="circle">
+					<p class="line1">Yêu được tận</p>
+					<counter id="daycount">
+						0 <i class="fa-solid fa-heart fa-bounce"></i> Ngày
+					</counter>
+					<p class="line2">Rồi đấy</p>
+				</div>
+				<div class="calender hide" id="date">
+					<div class="date">
+						<div id="year">Năm</div>
+						<div id="month">Tháng</div>
+						<div id="week">Tuần</div>
+						<div id="day">Ngày</div>
+					</div>
+					<div id="clock">
+						<div class="clock">00</div>
+						:
+						<div class="clock">00</div>
+						:
+						<div class="clock">00</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
 				<div class="main">
-					<div class="nameandavt">
-						<img src="images/avatar.png" alt="Avatar" />
+					<div class="main1">
+						<img src="images/avatar1.png" class="avt" alt="Avatar" />
 						<h1 class="name">Chu Đức Mạnh</h1>
+						<p class="sn">29-04-2009</p>
 					</div>
-					<p class="sn heart">29-04-2009</p>
-				</div>
-				<div class="day">
-					<p class="description">Đã bên nhau được</p>
-					<div class="days" onclick="change()">
-						<counter id="day" class="counter">
-							0 <i class="fa-solid fa-heart fa-bounce heart"></i> Ngày
-						</counter>
+					<div class="timestart">
+						<i class="fa-solid fa-heart fa-beat heartcenter"></i>
+						<p class="description" id="start">00-00-0000</p>
 					</div>
-					<p class="description small" id="clock">00:00:00</p>
-					<p class="description small heart" id="start">00-00-0000</p>
-				</div>
-				<div class="main">
-					<div class="nameandavt">
-						<img src="images/avatar.png" alt="Avatar" />
+					<div class="main2">
+						<img src="images/avatar2.png" class="avt" alt="Avatar" />
 						<h1 class="name">**********</h1>
+						<p class="sn">00-00-0000</p>
 					</div>
-					<p class="sn heart">00-00-0000</p>
 				</div>
 			</div>
 		</div>

@@ -11,121 +11,176 @@
 	user-select: none;
 }
 body {
-	background: #efe1f0;
-	font-family: "Segoe UI", sans-serif;
+	background: url(../images/bg.jpg);
+	background-position: center;
+	font-family: manh;
 	color: #f5f5f5;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	margin: 0;
+}
+wave {
+	background: url(../svg/wave.svg);
+	background-position: left;
+	position: absolute;
+	height: 300px;
+	width: 100vw;
+	bottom: 0px;
+	animation: wave 60s linear 0s infinite alternate-reverse none;
+}
+@keyframes wave {
+	0% {
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
 }
 .container {
+	width: 100vw;
+	height: 100vh;
+
 	display: flex;
 	flex-direction: column;
-	height: 90%;
-	max-height: 640px;
-	width: 80%;
-	max-width: 900px;
-}
-.title {
-	position: relative;
-	font-size: 250%;
-	height: 5%;
-	width: 100%;
-
-	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
-.popup {
+.container .top {
 	position: relative;
-	height: 80%;
+	background: transparent;
+	height: 60vh;
 	width: 100%;
-	background: #f0bcca;
-	border-radius: 10px;
-	overflow: auto;
+	max-width: 500px;
+	margin: 20px;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-}
-.main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
-img {
-	width: 12vw;
-	max-width: 70px;
-	height: 12vw;
-	max-height: 70px;
-	border-radius: 25px;
-	margin: 0px 10px;
-}
-.nameandavt {
-	margin: 15px 0px;
+.container .top .dayCount {
+	position: absolute;
+	max-height: 230px;
+	height: 50vw;
+	max-width: 230px;
+	width: 50vw;
+	background: #fff;
+	border-radius: 100%;
+	transition: 0.5s;
 
 	display: flex;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+}
+.container .top .line1,
+.container .top .line2 {
+	font-size: 110%;
+	font-weight: 500;
+}
+.container .top .line1 {
+	color: #f3aee9;
+}
+.container .top .line2 {
+	color: #cf82e9;
+}
+.container .top counter {
+	color: #3a3a3a;
+	font-size: 150%;
+	font-weight: bold;
+}
+.container .top .calender {
+	position: absolute;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: end;
+	transition: 0.5s;
+}
+.container .top .calender .date {
+	display: flex;
 	justify-content: center;
 	align-content: center;
 }
-.name {
-	margin: 15px 0px 5px 0px;
-	font-size: 145%;
-}
-#clock {
-	font-size: 120%;
-	font-style: normal;
-}
-.heart {
-	color: #f70707;
-}
-.sn {
-	margin: 1px 0px 0px 0px;
-	font-size: 95%;
-	font-style: italic;
-}
-.day {
-	margin: 0px 50px;
+.container .top .calender .date #year,
+.container .top .calender .date #month,
+.container .top .calender .date #week,
+.container .top .calender .date #day {
+	width: 20vw;
+	max-width: 80px;
+	height: 20vw;
+	max-height: 80px;
+	background: #fca7b5;
+	border-radius: 20px;
+	margin: 6px;
 
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
-.description {
-	margin: 0;
-	font-size: 105%;
-}
-.small {
-	margin-top: 10px;
-	font-size: 90%;
-	font-style: italic;
-	font-weight: bold;
-}
-.days {
-	margin: 5px 0px;
+.container .top .calender #clock {
+	margin: 0px 6px 6px 6px;
 
 	display: flex;
-	justify-items: center;
+}
+.container .top .calender #clock .clock {
+	background: #fca7b5;
+	border-radius: 5px;
+	margin: 0px 2.5px 0px 2.5px;
+}
+.container .bottom {
+	position: relative;
+	height: 40vh;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.container .bottom .main {
+	position: relative;
+	bottom: 50px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container .bottom .heartcenter {
+	color: #ff0000;
+	font-size: 300%;
+	margin: 0px 29px;
+}
+.container #start {
+	color: #ff0000;
+}
+.container .bottom .main .main1,
+.container .bottom .main .main2 {
+	width: 30vw;
+	max-width: 150px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-self: flex-start;
 	align-items: center;
 }
-counter {
-	font-weight: bold;
-	font-size: 180%;
-	margin: 0px 3px;
+.container .bottom .main .avt {
+	width: 20vw;
+	max-width: 100px;
+	border-radius: 100%;
 }
-.date {
+.container .bottom .main .name {
 	font-size: 130%;
+	color: #5f5f5f;
 }
-@media screen and (max-width: 1065px) {
-	.main {
-		width: 100%;
-	}
-	.day {
-		width: 100%;
-	}
+.container .bottom .main .sn {
+	color: #5f5f5f;
+}
+
+.hide {
+	transform: translateY(-1000px);
+}
+@font-face {
+	font-family: manh;
+	src: url(../fonts/font1.otf);
 }
