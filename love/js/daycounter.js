@@ -1,25 +1,25 @@
 var ngayyeu = "11/02/2022 13:30:00"; // MM/DD/YYYY h/m/s
-document.addEventListener("contextmenu", (event) => event.preventDefault());
-document.onkeydown = function (e) {
-	if (e.keyCode == 123) {
-		return false;
-	}
+// document.addEventListener("contextmenu", (event) => event.preventDefault());
+// document.onkeydown = function (e) {
+// 	if (e.keyCode == 123) {
+// 		return false;
+// 	}
 
-	// disable I key
-	if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-		return false;
-	}
+// 	// disable I key
+// 	if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+// 		return false;
+// 	}
 
-	// disable J key
-	if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-		return false;
-	}
+// 	// disable J key
+// 	if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+// 		return false;
+// 	}
 
-	// disable U key
-	if (e.ctrlKey && e.keyCode == 85) {
-		return false;
-	}
-};
+// 	// disable U key
+// 	if (e.ctrlKey && e.keyCode == 85) {
+// 		return false;
+// 	}
+// };
 const get_day_of_time = (d1, d2) => {
 	let ms1 = d1.getTime();
 	let ms2 = d2.getTime();

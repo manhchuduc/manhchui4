@@ -38,17 +38,18 @@ wave {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
+	margin: 0;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	text-align: center;
 }
 .container .top {
 	position: relative;
 	background: transparent;
-	height: 60vh;
+	height: 55%;
 	width: 100%;
 	max-width: 500px;
 
@@ -60,10 +61,10 @@ wave {
 .container .top .bg {
 	content: "";
 	position: absolute;
-	max-height: 260px;
-	height: 53vw;
-	max-width: 260px;
-	width: 53vw;
+	max-height: 290px;
+	height: 57vw;
+	max-width: 290px;
+	width: 57vw;
 	background: #fff;
 	border-radius: 100%;
 	transition: 0.5s;
@@ -74,10 +75,10 @@ wave {
 }
 .container .top .bg .bgprocess {
 	position: absolute;
-	max-height: 247px;
-	height: 49vw;
-	max-width: 247px;
-	width: 49vw;
+	max-height: 263px;
+	height: 52vw;
+	max-width: 263px;
+	width: 52vw;
 	background: #dd9bfa;
 	border-radius: 100%;
 
@@ -87,10 +88,10 @@ wave {
 }
 .container .top .bg .bgprocess #process {
 	position: absolute;
-	max-height: 250px;
-	height: 50vw;
-	max-width: 250px;
-	width: 50vw;
+	max-height: 290px;
+	height: 57vw;
+	max-width: 290px;
+	width: 57vw;
 	background: conic-gradient(transparent 3.6deg, #fff 0deg);
 	border-radius: 100%;
 
@@ -100,13 +101,12 @@ wave {
 }
 .container .top .dayCount {
 	position: absolute;
-	max-height: 210px;
-	height: 48vw;
-	max-width: 210px;
-	width: 48vw;
+	max-height: 225px;
+	height: 46vw;
+	max-width: 225px;
+	width: 46vw;
 	background: #fff;
 	border-radius: 100%;
-	transition: 0.5s;
 
 	display: flex;
 	flex-direction: column;
@@ -115,8 +115,8 @@ wave {
 }
 .container .top .line1,
 .container .top .line2 {
-	font-size: 110%;
-	font-weight: 500;
+	font-size: 100%;
+	font-weight: 450;
 }
 .container .top .line1 {
 	color: #f3aee9;
@@ -135,7 +135,7 @@ wave {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	align-items: end;
+	align-items: flex-end;
 	transition: 0.5s;
 }
 .container .top .calender .date {
@@ -154,25 +154,33 @@ wave {
 	background: #fca7b5;
 	border-radius: 20px;
 	margin: 6px;
+	font-weight: 600;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .container .top .calender #clock {
-	margin: 0px 6px 6px 6px;
+	margin: 2px 6px 6px 6px;
+	font-weight: 650;
 
 	display: flex;
 }
 .container .top .calender #clock .clock {
 	background: #fca7b5;
-	border-radius: 5px;
+	border-radius: 8px;
 	margin: 0px 2.5px 0px 2.5px;
+	border: #fca7b5 solid 2px;
+	font-family: typewriter;
+	font-weight: 600;
+}
+.container .top .calender #clock .clock br {
+	font-family: manh;
 }
 .container .bottom {
 	position: relative;
-	height: 40vh;
-	width: 100vw;
+	height: 45%;
+	width: 100%;
 
 	display: flex;
 	justify-content: center;
@@ -191,8 +199,10 @@ wave {
 	font-size: 300%;
 	margin: 0px 29px;
 }
-.container #start {
+.container .bottom #start {
 	color: #ff0000;
+	font-family: typewriter;
+	font-weight: 600;
 }
 .container .bottom .main .main1,
 .container .bottom .main .main2 {
@@ -203,9 +213,7 @@ wave {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	-webkit-justify-content: flex-start;
 	align-self: flex-start;
-	-webkit-align-self: flex-start;
 	align-items: center;
 }
 .container .bottom .main .avt {
@@ -216,9 +224,18 @@ wave {
 .container .bottom .main .name {
 	font-size: 130%;
 }
+.container .bottom .main .sn {
+	font-family: typewriter;
+	font-weight: 600;
+}
 
 .hide {
 	transform: translateY(-1000px);
+}
+
+@font-face {
+	font-family: typewriter;
+	src: url(../fonts/Underwood319.ttf);
 }
 @font-face {
 	font-family: manh;
