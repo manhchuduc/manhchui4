@@ -1,4 +1,4 @@
-var ngayyeu = "11/02/2022 13:30:00";
+var ngayyeu = "11/02/2022 13:30:00"; // MM/DD/YYYY h/m/s
 // document.addEventListener("contextmenu", (event) => event.preventDefault());
 // document.onkeydown = function (e) {
 // 	if (e.keyCode == 123) {
@@ -79,6 +79,50 @@ function change() {
 		date.classList.remove("hide");
 	}
 }
+function process() {
+	let when = new Date(ngayyeu);
+	let todate = new Date();
+	let time = get_day_of_time(when, todate);
+	time--;
+	let ele = document.getElementById("process");
+	let bg = document.getElementById("bg");
+
+	let maxProcess = time % 100;
+	speed = parseInt(maxProcess / 7);
+	valueProcess = 0;
+	count = 0;
+
+	let process = setInterval(() => {
+		valueProcess++;
+		ele.style.background =
+			"conic-gradient(transparent " + valueProcess * 3.6 + "deg, #fff 0deg)";
+		if (valueProcess >= 100) {
+			count++;
+			console.log(count);
+			time -= 100;
+			if (count === 1) {
+				bg.style.background = "#FFD6F3";
+			}
+			if (count === 2) {
+				bg.style.background = "#FFA6E2";
+			}
+			if (count === 3) {
+				bg.style.background = "#FF66CC";
+			}
+			if (count === 4) {
+				bg.style.background = "#E01FB3";
+			}
+			if (count === 5) {
+				bg.style.background = "#C118C7";
+			}
+			valueProcess = 0;
+		}
+		if (valueProcess === time) {
+			clearInterval(process);
+		}
+	}, speed);
+}
+process();
 function calander() {
 	let when = new Date(ngayyeu);
 	let todate = new Date();
