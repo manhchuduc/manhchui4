@@ -90,6 +90,7 @@ wave {
 	width: 57vw;
 	background: conic-gradient(transparent 3.6deg, #fff 0deg);
 	border-radius: 100%;
+	transition: 0.1s;
 
 	display: flex;
 	justify-content: center;
