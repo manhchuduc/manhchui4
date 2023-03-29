@@ -1,4 +1,4 @@
-var ngayyeu = "11/02/2022 13:30:00"; // MM/DD/YYYY h/m/s VD:"30/07/2023 13:30:00"
+var ngayyeu = "03/28/2023 00:00:00"; // MM/DD/YYYY h/m/s VD:"30/07/2023 13:30:00"
 document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.onkeydown = function (e) {
 	if (e.keyCode == 123) {
