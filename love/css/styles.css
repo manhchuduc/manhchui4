@@ -31,6 +31,7 @@ wave {
 	bottom: 0px;
 	animation: wave 30s linear 0s infinite alternate none;
 	box-sizing: border-box;
+	overflow: hidden;
 
 	display: block;
 }
