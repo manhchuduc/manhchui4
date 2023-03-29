@@ -1,4 +1,4 @@
-var ngayyeu = "11/02/2022 13:30:00"; // MM/DD/YYYY h/m/s
+var ngayyeu = "11/02/2022 13:30:00"; // MM/DD/YYYY h/m/s VD:"30/07/2023 13:30:00"
 document.addEventListener("contextmenu", (event) => event.preventDefault());
 document.onkeydown = function (e) {
 	if (e.keyCode == 123) {
@@ -89,6 +89,7 @@ function process() {
 
 	let valueProcess = 0;
 	count = 0;
+	next = false;
 
 	let process = setInterval(() => {
 		valueProcess++;
@@ -112,9 +113,15 @@ function process() {
 			if (count === 5) {
 				bg.style.background = "#C118C7";
 			}
+			if (count >= 10) {
+				next = true;
+			}
 			valueProcess = 0;
 		}
 		if (valueProcess === time) {
+			clearInterval(process);
+		}
+		if (next && valueProcess >= time % 100) {
 			clearInterval(process);
 		}
 	}, 5);
@@ -130,17 +137,17 @@ function calander() {
 	weekele = document.getElementById("week");
 	dayele = document.getElementById("day");
 
-	year = Math.floor(day / 365);
+	let year = Math.floor(day / 365);
 	day -= year * 365;
-	month = Math.floor(day / 30);
+	let month = Math.floor(day / 30);
 	day -= month * 30;
-	week = Math.floor(day / 7);
+	let week = Math.floor(day / 7);
 	day -= week * 7;
 
-	year = year + "<br>Năm</br>";
-	month = month + "<br>Tháng</br>";
-	week = week + "<br>Tuần</br>";
-	day = day + "<br>Ngày</br>";
+	year = `${year}<br>Năm</br>`;
+	month = `${month}<br>Tháng</br>`;
+	week = `${week}<br>Tuần</br>`;
+	day = `${day}<br>Ngày</br>`;
 
 	dayele.innerHTML = day;
 	yearele.innerHTML = year;
@@ -168,7 +175,7 @@ function date() {
 		whenmonth = "0" + whenmonth;
 	}
 
-	start.innerHTML = whenday + "-" + whenmonth + "-" + whenyear;
+	start.innerHTML = `${whenday}/${whenmonth}/${whenyear}`;
 
 	let hour = get_hour(when, todate);
 	let min = get_min(when, todate);
@@ -183,14 +190,7 @@ function date() {
 		hour += 23;
 	}
 	const clock = document.getElementById("clock");
-	clock.innerHTML =
-		'<div class="clock">' +
-		hour +
-		'</div>:<div class="clock">' +
-		min +
-		'</div>:<div class="clock">' +
-		sec +
-		"</div>";
+	clock.innerHTML = `<div class="clock">${hour}</div>:<div class="clock">${min}</div>:<div class="clock">${sec}</div>`;
 
 	setTimeout(date, 1000);
 }
@@ -205,7 +205,7 @@ function dayruner() {
 	var day = 0;
 	let days = setInterval(() => {
 		day++;
-		daycount.innerHTML = day + " Ngày";
+		daycount.innerHTML = `${day} Ngày`;
 		if (day == time) {
 			clearInterval(days);
 		}
