@@ -3,9 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-html {
-	overflow: hidden;
-}
 body {
 	background: url(../images/bg.jpg) center;
 	font-family: manh;
