@@ -28,7 +28,6 @@ wave {
 	background: url(../svg/wave1.svg) repeat;
 	background-position: left;
 	width: 100%;
-	width: 100dvw;
 	height: 250px;
 	bottom: 0px;
 	animation: wave 30s linear 0s infinite alternate none;
