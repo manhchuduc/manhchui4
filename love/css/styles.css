@@ -11,6 +11,7 @@
 	user-select: none;
 
 	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -22,6 +23,7 @@ body {
 	font-family: manh;
 	color: #f5f5f5;
 	overflow: hidden;
+	cursor: url("/cursor/pointer.cur"), auto;
 
 	display: flex;
 	justify-content: center;
@@ -60,7 +62,6 @@ wave {
 	align-items: center;
 }
 .container .top .bg {
-	content: "";
 	position: absolute;
 	max-height: 290px;
 	height: 57vw;
@@ -69,6 +70,7 @@ wave {
 	background: #fff;
 	border-radius: 100%;
 	transition: 0.5s;
+	cursor: url("/cursor/link.cur"), auto;
 
 	display: flex;
 	justify-content: center;
@@ -133,6 +135,7 @@ wave {
 }
 .container .top .calender {
 	position: absolute;
+	cursor: url("/cursor/link.cur"), auto;
 
 	transition: 0.5s;
 }
