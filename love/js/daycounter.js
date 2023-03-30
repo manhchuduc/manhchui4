@@ -144,11 +144,6 @@ function calander() {
 	let week = Math.floor(day / 7);
 	day -= week * 7;
 
-	year = `${year}<br>Năm</br>`;
-	month = `${month}<br>Tháng</br>`;
-	week = `${week}<br>Tuần</br>`;
-	day = `${day}<br>Ngày</br>`;
-
 	dayele.innerHTML = day;
 	yearele.innerHTML = year;
 	monthele.innerHTML = month;

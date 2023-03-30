@@ -49,7 +49,6 @@ wave {
 	position: relative;
 	background: transparent;
 	height: 60%;
-	max-width: 500px;
 
 	display: flex;
 	flex-direction: column;
@@ -119,14 +118,18 @@ wave {
 }
 .container .top .line1 {
 	color: #f3aee9;
+	font-size: 1em;
+	font-weight: 400;
 }
 .container .top .line2 {
 	color: #cf82e9;
+	font-size: 1em;
+	font-weight: 400;
 }
 .container .top counter {
 	color: #3b3b3b;
-	font-size: 150%;
-	font-weight: bold;
+	font-size: 1.5em;
+	font-weight: 600;
 }
 .container .top .calender {
 	position: absolute;
@@ -139,10 +142,10 @@ wave {
 	justify-content: center;
 	align-content: center;
 }
-.container .top .calender .date #year,
-.container .top .calender .date #month,
-.container .top .calender .date #week,
-.container .top .calender .date #day {
+.container .top .calender .date .y,
+.container .top .calender .date .m,
+.container .top .calender .date .w,
+.container .top .calender .date .d {
 	width: 20vw;
 	max-width: 80px;
 	height: 20vw;
@@ -153,8 +156,19 @@ wave {
 	font-weight: 600;
 
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+.container .top .calender .date .year,
+.container .top .calender .date .month,
+.container .top .calender .date .week,
+.container .top .calender .date .day {
+	background: #fff;
+	color: #d293f1;
+	border-radius: 50px;
+	font-size: 0.9em;
+	width: 3.5em;
 }
 .container .top .calender #start {
 	position: absolute;
@@ -176,6 +190,7 @@ wave {
 
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 }
 .container .top .calender #clock .clock {
 	width: 3.35ex;
@@ -211,14 +226,23 @@ wave {
 	align-items: center;
 	justify-content: center;
 }
-.container .bottom .heartcenter {
+.container .bottom .center {
+	position: relative;
+	width: 20vw;
+	max-width: 130px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .bottom .center .heartcenter {
 	color: #fd2828;
-	font-size: 300%;
+	font-size: 3.6em;
 	margin: 0px 29px;
 }
 .container .bottom .main .main1,
 .container .bottom .main .main2 {
-	width: 30vw;
+	width: 40vw;
 	max-width: 150px;
 	color: #3b3b3b;
 
@@ -227,6 +251,7 @@ wave {
 	justify-content: flex-start;
 	align-self: flex-start;
 	align-items: center;
+	text-align: center;
 }
 .container .bottom .main .avt {
 	width: 20vw;
@@ -234,13 +259,14 @@ wave {
 	border-radius: 100%;
 }
 .container .bottom .main .name {
-	font-size: 130%;
-	margin: 20px 0px 0px 10px;
+	font-size: 1.3em;
+	width: 100%;
+	margin: 20px 0px 0px 0px;
 }
 .container .bottom .main .sn {
 	font-family: typewriter;
 	font-weight: 600;
-	font-size: 110%;
+	font-size: 1.05em;
 }
 
 .hide {
