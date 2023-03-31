@@ -172,6 +172,15 @@ wave {
 	font-family: manh;
 	font-size: 0.8em;
 	width: 3.7em;
+	height: 1.09lh;
+	margin: 2.5px 0px 0px 0px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .top .calender .date .month {
+	width: 4.1em;
 }
 .container .top .calender #start {
 	position: absolute;
@@ -259,9 +268,9 @@ wave {
 	border-radius: 100%;
 }
 .container .bottom .main .name {
-	font-size: 1.3em;
+	font-size: 1.2em;
 	width: 100%;
-	margin: 20px 0px 0px 0px;
+	margin: 15px 0px 0px 0px;
 }
 .container .bottom .main .sn {
 	font-family: typewriter;
