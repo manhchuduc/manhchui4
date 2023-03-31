@@ -90,6 +90,7 @@ function process() {
 	let valueProcess = 0;
 	count = 0;
 	next = false;
+	spee = speed = 3 / time;
 
 	let process = setInterval(() => {
 		valueProcess++;
@@ -124,7 +125,7 @@ function process() {
 		if (next && valueProcess >= time % 100) {
 			clearInterval(process);
 		}
-	}, 5);
+	}, speed);
 }
 process();
 function calander() {
@@ -190,19 +191,19 @@ function date() {
 	setTimeout(date, 1000);
 }
 date();
-
 function dayruner() {
 	let when = new Date(ngayyeu);
 	let todate = new Date();
 	let time = get_day_of_time(when, todate);
 	time--;
+	speed = 3 / time;
 
-	var day = 0;
+	let day = 0;
 	let days = setInterval(() => {
 		day++;
 		daycount.innerHTML = `${day} Ngày`;
 		if (day == time) {
 			clearInterval(days);
 		}
-	}, 5);
+	}, speed);
 }
