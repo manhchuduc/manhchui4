@@ -70,8 +70,7 @@ a:hover {
 
 	display: flex;
 }
-.sun,
-.moon {
+#darkmodebut {
 	position: absolute;
 	height: 9.3vw;
 	width: 9.3vw;
@@ -84,17 +83,15 @@ a:hover {
 	transition: 0.5s;
 	animation: insidestart 1s, scale 0.1s;
 	margin: 20px;
-	visibility: visible;
-	opacity: 1;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.sun:hover {
+#darkmodebut:hover {
 	background: #e4e3e3;
 }
-.lovepage {
+#lovepage {
 	position: absolute;
 	height: 9.3vw;
 	max-height: 45px;
@@ -110,10 +107,11 @@ a:hover {
 	border-radius: 30%;
 
 	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 }
-.lovepage:hover {
+#lovepage:hover {
 	background: #e4e3e3;
 }
 .moon {
@@ -139,7 +137,7 @@ a:hover {
 	align-items: flex-start;
 	justify-content: flex-start;
 }
-.avatar {
+#avatar {
 	border-radius: 100%;
 	width: 45vw;
 	height: 45vw;
@@ -149,7 +147,7 @@ a:hover {
 	animation: insidestart 1s;
 	margin: 2px;
 }
-.avatar:active {
+#avatar:active {
 	scale: 1.05;
 }
 .name {

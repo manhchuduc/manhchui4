@@ -19,6 +19,10 @@ document.onkeydown = function (e) {
 		return false;
 	}
 };
+document.getElementById("fb").addEventListener("click", fb);
+document.getElementById("tt").addEventListener("click", tt);
+document.getElementById("ig").addEventListener("click", ig);
+document.getElementById("gh").addEventListener("click", gh);
 function fb() {
 	window.open("https://www.facebook.com/100090568388319");
 }
@@ -34,21 +38,30 @@ function gh() {
 function lovepage() {
 	window.open("love");
 }
+document.getElementById("darkmodebut").addEventListener("click", darkmode);
+document.getElementById("lovepage").addEventListener("click", lovepage);
+document.getElementById("avatar").addEventListener("click", avt);
 function check() {
+	let element = document.body;
+	let dark = document.getElementById("darkmodebut");
 	var check = localStorage.getItem("darkmode");
 	if (check) {
-		let ele = document.body;
-		ele.classList.add("dark");
+		element.classList.add("dark");
+		dark.innerHTML = '<i class="fa-solid fa-moon"></i>';
 	}
 }
+check();
 function darkmode() {
-	var element = document.body;
+	let element = document.body;
+	let dark = document.getElementById("darkmodebut");
 	var check = localStorage.getItem("darkmode");
 	if (check) {
 		element.classList.remove("dark");
+		dark.innerHTML = '<i class="fa-solid fa-sun"></i>';
 		localStorage.removeItem("darkmode");
 	} else {
 		element.classList.add("dark");
+		dark.innerHTML = '<i class="fa-solid fa-moon"></i>';
 		localStorage.setItem("darkmode", "True");
 	}
 }

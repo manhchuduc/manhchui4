@@ -17,33 +17,18 @@
 			src="https://kit.fontawesome.com/6c218960be.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="js/script.js"></script>
 	</head>
 	<body>
-		<script>
-			check();
-		</script>
 		<div class="box">
 			<div class="content">
 				<div class="tools">
-					<span class="moon" onclick="darkmode()"
-						><i class="fa-solid fa-moon"></i
-					></span>
-					<span class="sun" onclick="darkmode()">
-						<i class="fa-solid fa-sun"></i>
-					</span>
-					<!-- <span class="lovepage" onclick="lovepage()">
+					<span id="darkmodebut"><i class="fa-solid fa-sun"></i></span>
+					<span id="lovepage">
 						<i class="fa-solid fa-heart"></i>
-					</span> -->
+					</span>
 				</div>
 				<div class="profile">
-					<img
-						src="photos/avatar.png"
-						alt="Avatar"
-						class="avatar"
-						id="avatar"
-						onclick="avt()"
-					/>
+					<img src="photos/avatar.png" alt="Avatar" id="avatar" />
 					<div class="info">
 						<h1 class="name">Chu Duc Manh</h1>
 						<p class="description">
@@ -52,18 +37,18 @@
 					</div>
 				</div>
 				<div class="buttons">
-					<a onclick="fb()"
+					<a
 						><span class="button fb" id="fb">
 							<i class="fab fa-square-facebook"></i></span
 					></a>
-					<a onclick="tt()"
+					<a
 						><span class="button tt" id="tt"><i class="fab fa-tiktok"></i></span
 					></a>
-					<a onclick="ig()"
+					<a
 						><span class="button ig" id="ig"
 							><i class="fab fa-instagram"></i></span
 					></a>
-					<a onclick="gh()"
+					<a
 						><span class="button gh" id="gh">
 							<i class="fab fa-github"></i></span
 					></a>
@@ -71,4 +56,5 @@
 			</div>
 		</div>
 	</body>
+	<script src="js/script.js"></script>
 </html>

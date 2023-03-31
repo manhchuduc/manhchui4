@@ -11,24 +11,15 @@
 	color: #cccaca;
 	background: #272121;
 }
-.dark .sun,
-.dark .moon,
-.dark .lovepage {
+.dark #darkmodebut,
+.dark #lovepage {
 	background: #272121;
 	color: #865dff;
 }
-.dark .sun {
-	opacity: 0;
-	visibility: hidden;
-}
-.dark .moon {
-	opacity: 1;
-	visibility: visible;
-}
-.dark .moon:hover {
+.dark #darkmodebut:hover {
 	background: #1b1b1b;
 }
-.dark .lovepage:hover {
+.dark #lovepage:hover {
 	background: #1b1b1b;
 }
 .dark .name {

@@ -29,54 +29,41 @@ const get_hour = (d1, d2) => {
 	let h1 = d1.getHours();
 	let h2 = d2.getHours();
 	ans = Math.ceil(h2 - h1);
-	if (ans < 0) {
-		ans += 24;
-	}
-	if (ans - 10 < 0) {
-		return "0" + ans;
-	} else {
-		return ans;
-	}
+	return ans;
 };
 const get_min = (d1, d2) => {
 	let min1 = d1.getMinutes();
 	let min2 = d2.getMinutes();
 	ans = Math.ceil(min2 - min1);
-	if (ans < 0) {
-		ans += 60;
-	}
-	if (ans - 10 < 0) {
-		return "0" + ans;
-	} else {
-		return ans;
-	}
+	return ans;
 };
 const get_sec = (d1, d2) => {
 	let sec1 = d1.getSeconds();
 	let sec2 = d2.getSeconds();
 	ans = Math.ceil(sec2 - sec1);
-	if (ans < 0) {
-		ans += 60;
-	}
-	if (ans - 10 < 0) {
-		return "0" + ans;
-	} else {
-		return ans;
-	}
+	return ans;
 };
-document.getElementById("circle").addEventListener("click", change);
-document.getElementById("date").addEventListener("click", change);
+document.getElementById("counter").addEventListener("click", change);
+document.getElementById("calender").addEventListener("click", change);
 function change() {
-	let circle = document.getElementById("circle");
-	let date = document.getElementById("date");
+	let circle = document.getElementById("counter");
+	let date = document.getElementById("calender");
 
 	checker = circle.classList.contains("hide");
 	if (checker) {
 		date.classList.add("hide");
 		circle.classList.remove("hide");
+		date.style.opacity = "0";
+		date.style.transform = "translateX(70vw)";
+		circle.style.opacity = "1";
+		circle.style.transform = "none";
 	} else {
 		circle.classList.add("hide");
 		date.classList.remove("hide");
+		circle.style.opacity = "0";
+		circle.style.transform = "translateX(-70vw)";
+		date.style.opacity = "1";
+		date.style.transform = "none";
 	}
 }
 function process() {
@@ -176,14 +163,30 @@ function date() {
 	let hour = get_hour(when, todate);
 	let min = get_min(when, todate);
 	let sec = get_sec(when, todate);
+	if (sec < 0) {
+		min--;
+		sec += 60;
+	}
+	if (sec < 10) {
+		sec = "0" + sec;
+	}
+	if (min < 0) {
+		hour--;
+		min += 60;
+	}
+	if (min < 10) {
+		min = "0" + min;
+	}
+	if (hour < 0) {
+		hour += 24;
+	}
+	if (hour < 10) {
+		hour = "0" + hour;
+	}
 	if (hour == 0 && min == 0 && sec == 0) {
 		time++;
 		calander();
 		dayruner();
-	}
-	if (hour == 0 && min >= todate.getMinutes()) {
-		hour = parseInt(hour);
-		hour += 23;
 	}
 	const clock = document.getElementById("clock");
 	clock.innerHTML = `<div class="clock">${hour}</div>:<div class="clock">${min}</div>:<div class="clock">${sec}</div>`;
