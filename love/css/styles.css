@@ -48,8 +48,8 @@ wave {
 .container .top {
 	position: relative;
 	background: transparent;
-	height: 60vh;
-	border: #000 solid 10px;
+	height: 50vh;
+	/* border: #000 solid 10px; */
 
 	display: flex;
 	flex-direction: column;
@@ -230,7 +230,8 @@ wave {
 .container .bottom {
 	position: relative;
 	height: 40vh;
-	border: #000 solid 10px;
+	margin: 20px 0px 0px 0px;
+	/* border: #000 solid 10px; */
 
 	display: flex;
 	justify-content: center;
