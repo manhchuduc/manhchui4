@@ -43,8 +43,8 @@ const get_sec = (d1, d2) => {
 	ans = Math.ceil(sec2 - sec1);
 	return ans;
 };
-document.getElementById("counter").addEventListener("click", change);
-document.getElementById("calender").addEventListener("click", change);
+document.querySelector("#counter").addEventListener("click", change);
+document.querySelector("#calender").addEventListener("click", change);
 function change() {
 	let circle = document.getElementById("counter");
 	let date = document.getElementById("calender");
@@ -53,53 +53,46 @@ function change() {
 	if (checker) {
 		date.classList.add("hide");
 		circle.classList.remove("hide");
-		date.style.opacity = "0";
-		date.style.transform = "translateX(70vw)";
-		circle.style.opacity = "1";
-		circle.style.transform = "none";
 	} else {
 		circle.classList.add("hide");
 		date.classList.remove("hide");
-		circle.style.opacity = "0";
-		circle.style.transform = "translateX(-70vw)";
-		date.style.opacity = "1";
-		date.style.transform = "none";
 	}
 }
 function process() {
+	let ele = document.querySelector(".process");
 	let when = new Date(ngayyeu);
 	let todate = new Date();
 	let time = get_day_of_time(when, todate);
 	time--;
-	let ele = document.getElementById("process");
-	let bg = document.getElementById("bg");
 
 	let valueProcess = 0;
 	count = 0;
 	next = false;
-	spee = speed = 3 / time;
+	speed = 3 / time;
+	color = "#dd9bfa";
 
 	let process = setInterval(() => {
 		valueProcess++;
-		ele.style.background =
-			"conic-gradient(transparent " + valueProcess * 3.6 + "deg, #fff 0deg)";
+		ele.style.background = `conic-gradient(${color} ${
+			valueProcess * 3.6
+		}deg, #fff 0deg)`;
 		if (valueProcess >= 100) {
 			count++;
 			time -= 100;
 			if (count === 1) {
-				bg.style.background = "#FFD6F3";
+				color = "#FFD6F3";
 			}
 			if (count === 2) {
-				bg.style.background = "#FFA6E2";
+				color = "#FFA6E2";
 			}
 			if (count === 3) {
-				bg.style.background = "#FF66CC";
+				color = "#FF66CC";
 			}
 			if (count === 4) {
-				bg.style.background = "#E01FB3";
+				color = "#E01FB3";
 			}
 			if (count === 5) {
-				bg.style.background = "#C118C7";
+				color = "#C118C7";
 			}
 			if (count >= 10) {
 				next = true;
@@ -115,6 +108,24 @@ function process() {
 	}, speed);
 }
 process();
+function dayruner() {
+	const daycount = document.querySelector("#daycount");
+	let when = new Date(ngayyeu);
+	let todate = new Date();
+	let time = get_day_of_time(when, todate);
+	time--;
+	speed = 3 / time;
+
+	let day = 0;
+	let days = setInterval(() => {
+		day++;
+		daycount.innerHTML = `${day} Ngày`;
+		if (day == time) {
+			clearInterval(days);
+		}
+	}, speed);
+}
+dayruner();
 function calander() {
 	let when = new Date(ngayyeu);
 	let todate = new Date();
@@ -138,15 +149,13 @@ function calander() {
 	weekele.innerHTML = week;
 }
 calander();
-dayruner();
 function date() {
 	let when = new Date(ngayyeu);
 	let todate = new Date();
 	let time = get_day_of_time(when, todate);
 	time--;
 
-	const daycount = document.getElementById("daycount");
-	const start = document.getElementById("start");
+	const start = document.querySelector(".start");
 
 	let whenyear = when.getFullYear();
 	let whenmonth = when.getMonth() + 1;
@@ -188,25 +197,9 @@ function date() {
 		calander();
 		dayruner();
 	}
-	const clock = document.getElementById("clock");
+	const clock = document.querySelector(".time");
 	clock.innerHTML = `<div class="clock">${hour}</div>:<div class="clock">${min}</div>:<div class="clock">${sec}</div>`;
 
 	setTimeout(date, 1000);
 }
 date();
-function dayruner() {
-	let when = new Date(ngayyeu);
-	let todate = new Date();
-	let time = get_day_of_time(when, todate);
-	time--;
-	speed = 3 / time;
-
-	let day = 0;
-	let days = setInterval(() => {
-		day++;
-		daycount.innerHTML = `${day} Ngày`;
-		if (day == time) {
-			clearInterval(days);
-		}
-	}, speed);
-}

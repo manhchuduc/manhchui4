@@ -8,6 +8,7 @@ html {
 }
 body {
 	background: url(../images/bg.jpg) center;
+	background-size: cover;
 	font-family: manh;
 	color: #f5f5f5;
 	overflow: hidden;
@@ -26,7 +27,7 @@ body {
 	user-select: none;
 }
 wave {
-	position: absolute;
+	position: fixed;
 	background: url(../svg/wave1.svg) repeat;
 	background-position: left;
 	width: 100%;
@@ -45,14 +46,21 @@ wave {
 		background-position: right;
 	}
 }
+.container {
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 .container .top {
 	position: relative;
 	background: transparent;
 	height: 50vh;
-	/* border: #000 solid 10px; */
+	top: 0px;
 
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
@@ -64,12 +72,16 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
+.container .top #counter.hide {
+	opacity: 0;
+	transform: translateX(-70vw);
+}
 .container .top #counter .bg {
 	position: absolute;
 	max-height: 290px;
-	height: 57vw;
+	height: 57vmin;
 	max-width: 290px;
-	width: 57vw;
+	width: 57vmin;
 	background: #fff;
 	border-radius: 100%;
 	cursor: url("/cursor/link.cur"), auto;
@@ -78,25 +90,12 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top #counter .bg .bgprocess {
+.container .top #counter .bg .process {
 	position: absolute;
 	max-height: 263px;
-	height: 52vw;
+	height: 52vmin;
 	max-width: 263px;
-	width: 52vw;
-	background: #dd9bfa;
-	border-radius: 100%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.container .top #counter .bg .bgprocess #process {
-	position: absolute;
-	max-height: 290px;
-	height: 57vw;
-	max-width: 290px;
-	width: 57vw;
+	width: 52vmin;
 	background: conic-gradient(transparent 3.6deg, #fff 0deg);
 	border-radius: 100%;
 	transition: 0.1s;
@@ -108,9 +107,9 @@ wave {
 .container .top #counter .dayCount {
 	position: absolute;
 	max-height: 225px;
-	height: 46vw;
+	height: 46vmin;
 	max-width: 225px;
-	width: 46vw;
+	width: 46vmin;
 	background: #fff;
 	border-radius: 100%;
 
@@ -143,7 +142,10 @@ wave {
 	position: absolute;
 	cursor: url("/cursor/link.cur"), auto;
 	transition: transform 0.5s, opacity 0.3s;
-	transform: translateX(100vw);
+}
+.container .top #calender.hide {
+	opacity: 0;
+	transform: translateX(70vw);
 }
 .container .top #calender .date {
 	font-family: typewriter;
@@ -156,9 +158,9 @@ wave {
 .container .top #calender .date .m,
 .container .top #calender .date .w,
 .container .top #calender .date .d {
-	width: 20vw;
+	width: 20vmin;
 	max-width: 80px;
-	height: 20vw;
+	height: 20vmin;
 	max-height: 80px;
 	background: #d293f1;
 	border-radius: 1.35em;
@@ -190,7 +192,7 @@ wave {
 .container .top #calender .date .month {
 	width: 4.1em;
 }
-.container .top #calender #start {
+.container .top #calender .start {
 	position: absolute;
 	left: 0px;
 	margin: 3px 0px 0px 6px;
@@ -202,7 +204,7 @@ wave {
 	font-family: typewriter;
 	font-weight: 600;
 }
-.container .top #calender #clock {
+.container .top #calender .time {
 	left: 0px;
 	font-weight: 650;
 	color: #f39fd8;
@@ -212,7 +214,7 @@ wave {
 	justify-content: flex-end;
 	align-items: center;
 }
-.container .top #calender #clock .clock {
+.container .top #calender .time .clock {
 	width: 3.35ex;
 	height: 3.35ex;
 	background: #f39fd8;
@@ -230,8 +232,7 @@ wave {
 .container .bottom {
 	position: relative;
 	height: 40vh;
-	margin: 20px 0px 0px 0px;
-	/* border: #000 solid 10px; */
+	margin: 3vh 0px 0px 0px;
 
 	display: flex;
 	justify-content: center;
@@ -247,8 +248,9 @@ wave {
 }
 .container .bottom .center {
 	position: relative;
-	width: 20vw;
+	width: 20vmin;
 	max-width: 130px;
+	min-width: 90px;
 
 	display: flex;
 	justify-content: center;
@@ -261,7 +263,7 @@ wave {
 }
 .container .bottom .main .main1,
 .container .bottom .main .main2 {
-	width: 38vw;
+	width: 38vmin;
 	max-width: 150px;
 	color: #3b3b3b;
 
@@ -273,7 +275,7 @@ wave {
 	text-align: center;
 }
 .container .bottom .main .avt {
-	width: 20vw;
+	width: 20vmin;
 	max-width: 95px;
 	border-radius: 100%;
 }
@@ -287,13 +289,6 @@ wave {
 	font-weight: 600;
 	font-size: 1.05em;
 }
-.snowflake {
-	color: #fff;
-	font-size: 1em;
-	font-family: Arial;
-	text-shadow: 0 0 1px #000;
-}
-
 @font-face {
 	font-family: typewriter;
 	src: url(../fonts/Underwood319.ttf);
