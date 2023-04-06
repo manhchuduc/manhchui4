@@ -27,9 +27,10 @@ body {
 	user-select: none;
 }
 wave {
-	position: fixed;
+	position: absolute;
 	background: url(../svg/wave1.svg) repeat;
 	background-position: left;
+	background-repeat:no-repeat;
 	width: 100%;
 	height: 250px;
 	bottom: 0px;
