@@ -66,10 +66,10 @@ function process() {
 	time--;
 
 	let valueProcess = 0;
-	count = 0;
-	next = false;
-	speed = 3 / time;
-	color = "#dd9bfa";
+	let count = 0;
+	let next = false;
+	let speed = 3 / time;
+	let color = "#dd9bfa";
 
 	let process = setInterval(() => {
 		valueProcess++;
@@ -81,35 +81,27 @@ function process() {
 			time -= 100;
 			if (count === 1) {
 				color = "#FFD6F3";
-			}
-			if (count === 2) {
+			} else if (count === 2) {
 				color = "#FFA6E2";
-			}
-			if (count === 3) {
+			} else if (count === 3) {
 				color = "#FF66CC";
-			}
-			if (count === 4) {
+			} else if (count === 4) {
 				color = "#E01FB3";
-			}
-			if (count === 5) {
+			} else if (count === 5) {
 				color = "#C118C7";
-			}
-			if (count >= 10) {
+			} else if (count >= 10) {
 				next = true;
 			}
 			valueProcess = 0;
 		}
-		if (valueProcess === time) {
-			clearInterval(process);
-		}
-		if (next && valueProcess >= time % 100) {
+		if (valueProcess === time || (next && valueProcess >= time % 100)) {
 			clearInterval(process);
 		}
 	}, speed);
 }
 process();
 function dayruner() {
-	const daycount = document.querySelector("#daycount");
+	const daycount = document.querySelector("counter");
 	let when = new Date(ngayyeu);
 	let todate = new Date();
 	let time = get_day_of_time(when, todate);
@@ -120,7 +112,7 @@ function dayruner() {
 	let days = setInterval(() => {
 		day++;
 		daycount.innerHTML = `${day} Ngày`;
-		if (day == time) {
+		if (day === time) {
 			clearInterval(days);
 		}
 	}, speed);
@@ -131,10 +123,10 @@ function calander() {
 	let todate = new Date();
 	let day = Math.ceil((todate - when) / 1000 / 24 / 60 / 60) - 1;
 
-	let yearele = document.getElementById("year");
-	monthele = document.getElementById("month");
-	weekele = document.getElementById("week");
-	dayele = document.getElementById("day");
+	const yearele = document.getElementById("year");
+	const monthele = document.getElementById("month");
+	const weekele = document.getElementById("week");
+	const dayele = document.getElementById("day");
 
 	let year = Math.floor(day / 365);
 	day -= year * 365;
@@ -152,8 +144,6 @@ calander();
 function date() {
 	let when = new Date(ngayyeu);
 	let todate = new Date();
-	let time = get_day_of_time(when, todate);
-	time--;
 
 	const start = document.querySelector(".start");
 
