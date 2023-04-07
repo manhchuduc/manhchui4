@@ -13,6 +13,7 @@ body {
 	color: #f5f5f5;
 	overflow: hidden;
 	cursor: url("/cursor/pointer.cur"), auto;
+	padding: 4vmin;
 
 	display: flex;
 	justify-content: center;
@@ -47,8 +48,6 @@ wave {
 	}
 }
 .container {
-	margin: 5vmin;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -79,7 +78,7 @@ wave {
 	transform: translateX(-70vw);
 }
 .container .top #counter .bg {
-	position: absolute;
+	position: relative;
 	max-height: 260px;
 	height: 51vmin;
 	max-width: 260px;
