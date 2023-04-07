@@ -13,7 +13,7 @@ body {
 	color: #f5f5f5;
 	overflow: hidden;
 	cursor: url("/cursor/pointer.cur"), auto;
-	padding: 4vmin;
+	padding: 20px;
 
 	display: flex;
 	justify-content: center;
@@ -50,23 +50,20 @@ wave {
 .container {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 }
 .container .top {
 	position: relative;
-	background: transparent;
 	height: 35vh;
 	top: 0px;
-	margin: 3vmin;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	justify-self: flex-start;
 }
 .container .top #counter {
-	position: absolute;
+	position: relative;
 	transition: transform 0.5s, opacity 0.3s;
 
 	display: flex;
@@ -74,11 +71,12 @@ wave {
 	align-items: center;
 }
 .container .top #counter.hide {
+	position: absolute;
 	opacity: 0;
 	transform: translateX(-70vw);
 }
 .container .top #counter .bg {
-	position: relative;
+	position: absolute;
 	max-height: 260px;
 	height: 51vmin;
 	max-width: 260px;
@@ -140,11 +138,12 @@ wave {
 	font-weight: 600;
 }
 .container .top #calender {
-	position: absolute;
+	position: relative;
 	cursor: url("/cursor/link.cur"), auto;
 	transition: transform 0.5s, opacity 0.3s;
 }
 .container .top #calender.hide {
+	position: absolute;
 	opacity: 0;
 	transform: translateX(70vw);
 }
@@ -230,7 +229,7 @@ wave {
 .container .bottom {
 	position: relative;
 	height: 45vh;
-	/* padding: 3vmin; */
+	overflow: hidden;
 
 	display: flex;
 	justify-content: center;
@@ -331,7 +330,7 @@ wave {
 .container .bottom .main .name {
 	font-size: 1.17em;
 	width: 40vw;
-	margin: 1.3vmin 1vmin 0 1vmin;
+	margin: 0.5vmin 1vmin 0 1vmin;
 }
 .container .bottom .main .sn1,
 .container .bottom .main .sn2 {
