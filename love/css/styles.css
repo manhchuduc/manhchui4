@@ -68,7 +68,7 @@ wave {
 .container .top .scroll {
 	position: relative;
 	height: 51vw;
-	width: 90vw;
+	width: 100vw;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 
@@ -83,7 +83,7 @@ wave {
 	align-items: center;
 }
 .container .top .s1 {
-	width: 90vw;
+	width: 100vw;
 
 	display: flex;
 	justify-content: center;
@@ -161,7 +161,7 @@ wave {
 }
 
 .container .top .s2 {
-	width: 90vw;
+	width: 100vw;
 
 	display: flex;
 	justify-content: center;
