@@ -30,12 +30,11 @@ wave {
 	position: absolute;
 	background: url(../svg/wave1.svg) repeat;
 	background-position: left;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 	width: 100%;
 	height: 250px;
 	bottom: 0px;
 	animation: wave 30s linear 0s infinite alternate none;
-	box-sizing: border-box;
 
 	display: block;
 }
@@ -48,21 +47,24 @@ wave {
 	}
 }
 .container {
+	margin: 5vmin;
+
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 }
 .container .top {
 	position: relative;
 	background: transparent;
-	height: 50vh;
+	height: 35vh;
 	top: 0px;
 	margin: 3vmin;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	justify-self: flex-start;
 }
 .container .top #counter {
 	position: absolute;
@@ -78,10 +80,10 @@ wave {
 }
 .container .top #counter .bg {
 	position: absolute;
-	max-height: 270px;
-	height: 53vmin;
-	max-width: 270px;
-	width: 53vmin;
+	max-height: 260px;
+	height: 51vmin;
+	max-width: 260px;
+	width: 51vmin;
 	background: #fff;
 	border-radius: 100%;
 	cursor: url("/cursor/link.cur"), auto;
@@ -92,10 +94,10 @@ wave {
 }
 .container .top #counter .bg .process {
 	position: absolute;
-	max-height: 245px;
-	height: 48vmin;
-	max-width: 245px;
-	width: 48vmin;
+	max-height: 235px;
+	height: 46vmin;
+	max-width: 235px;
+	width: 46vmin;
 	background: conic-gradient(transparent 3.6deg, #fff 0deg);
 	border-radius: 100%;
 	transition: 0.1s;
@@ -106,10 +108,10 @@ wave {
 }
 .container .top #counter .dayCount {
 	position: absolute;
-	max-height: 215px;
-	height: 42vmin;
-	max-width: 215px;
-	width: 42vmin;
+	max-height: 205px;
+	height: 40vmin;
+	max-width: 205px;
+	width: 40vmin;
 	background: #fff;
 	border-radius: 100%;
 
@@ -121,7 +123,7 @@ wave {
 .container .top #counter .line1,
 .container .top #counter .line2 {
 	font-size: 100%;
-	font-weight: 450;
+	font-weight: 400;
 }
 .container .top #counter .line1 {
 	color: #f3aee9;
@@ -181,7 +183,7 @@ wave {
 	border-radius: 50px;
 	font-family: manh;
 	font-size: 0.85em;
-	height: 3.7ex;
+	height: 3.3ex;
 	margin: 3px 0px 0px 0px;
 
 	display: flex;
@@ -228,8 +230,8 @@ wave {
 }
 .container .bottom {
 	position: relative;
-	height: 40vh;
-	margin: 0px 3vmin 3vmin 3vmin;
+	height: 45vh;
+	/* padding: 3vmin; */
 
 	display: flex;
 	justify-content: center;
@@ -237,7 +239,7 @@ wave {
 }
 .container .bottom .main {
 	position: relative;
-	margin: 0 0 2.5vmin 0;
+	padding: 0 0 2.5vmin 0;
 
 	display: flex;
 	align-items: center;
@@ -245,9 +247,10 @@ wave {
 }
 .container .bottom .center {
 	position: relative;
-	width: 10vw;
+	width: 9vw;
 	max-width: 130px;
-	min-width: 75px;
+	min-width: 65px;
+	margin: 1vw;
 
 	display: flex;
 	justify-content: center;
@@ -255,7 +258,7 @@ wave {
 }
 .container .bottom .center .heartcenter {
 	color: #fd2828;
-	font-size: 3em;
+	font-size: 12vmin;
 	margin: 0px 29px;
 }
 .container .bottom .main .main1,
@@ -329,7 +332,7 @@ wave {
 .container .bottom .main .name {
 	font-size: 1.17em;
 	width: 40vw;
-	margin: 1.3vmin 0px 0px 0px;
+	margin: 1.3vmin 1vmin 0 1vmin;
 }
 .container .bottom .main .sn1,
 .container .bottom .main .sn2 {
