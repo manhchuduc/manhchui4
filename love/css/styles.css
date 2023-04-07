@@ -3,6 +3,10 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+::-webkit-scrollbar {
+	width: 0;
+	display: none;
+}
 html {
 	overflow: hidden;
 }
@@ -62,20 +66,39 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top #counter {
+.container .top .scroll {
 	position: relative;
+	height: 100%;
+	width: 90vw;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+
+	display: flex;
+}
+.container .top .scroll .snap {
+	position: relative;
+	scroll-snap-align: start;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .top .s1 {
+	width: 90vw;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .top .s1 #counter {
+	position: absolute;
 	transition: transform 0.5s, opacity 0.3s;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.container .top #counter.hide {
-	position: absolute;
-	opacity: 0;
-	transform: translateX(-70vw);
-}
-.container .top #counter .bg {
+.container .top .s1 #counter .bg {
 	position: absolute;
 	max-height: 260px;
 	height: 51vmin;
@@ -89,7 +112,7 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top #counter .bg .process {
+.container .top .s1 #counter .bg .process {
 	position: absolute;
 	max-height: 235px;
 	height: 46vmin;
@@ -103,7 +126,7 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top #counter .dayCount {
+.container .top .s1 #counter .dayCount {
 	position: absolute;
 	max-height: 205px;
 	height: 40vmin;
@@ -117,47 +140,50 @@ wave {
 	align-items: center;
 	justify-content: center;
 }
-.container .top #counter .line1,
-.container .top #counter .line2 {
+.container .top .s1 #counter .line1,
+.container .top .s1 #counter .line2 {
 	font-size: 100%;
 	font-weight: 400;
 }
-.container .top #counter .line1 {
+.container .top .s1 #counter .line1 {
 	color: #f3aee9;
 	font-size: 0.95em;
 	font-weight: 400;
 }
-.container .top #counter .line2 {
+.container .top .s1 #counter .line2 {
 	color: #cf82e9;
 	font-size: 0.95em;
 	font-weight: 400;
 }
-.container .top #counter counter {
+.container .top .s1 #counter counter {
 	color: #3b3b3b;
 	font-size: 1.4em;
 	font-weight: 600;
 }
-.container .top #calender {
-	position: relative;
+
+.container .top .s2 {
+	width: 90vw;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .top .s2 #calender {
+	position: absolute;
 	cursor: url("/cursor/link.cur"), auto;
 	transition: transform 0.5s, opacity 0.3s;
 }
-.container .top #calender.hide {
-	position: absolute;
-	opacity: 0;
-	transform: translateX(70vw);
-}
-.container .top #calender .date {
+.container .top .s2 #calender .date {
 	font-family: typewriter;
 
 	display: flex;
 	justify-content: center;
 	align-content: center;
 }
-.container .top #calender .date .y,
-.container .top #calender .date .m,
-.container .top #calender .date .w,
-.container .top #calender .date .d {
+.container .top .s2 #calender .date .y,
+.container .top .s2 #calender .date .m,
+.container .top .s2 #calender .date .w,
+.container .top .s2 #calender .date .d {
 	width: 20vmin;
 	max-width: 80px;
 	height: 20vmin;
@@ -172,10 +198,10 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top #calender .date .year,
-.container .top #calender .date .month,
-.container .top #calender .date .week,
-.container .top #calender .date .day {
+.container .top .s2 #calender .date .year,
+.container .top .s2 #calender .date .month,
+.container .top .s2 #calender .date .week,
+.container .top .s2 #calender .date .day {
 	background: #fff;
 	color: #d293f1;
 	border-radius: 50px;
@@ -188,7 +214,7 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top #calender .start {
+.container .top .s2 #calender .start {
 	position: absolute;
 	left: 0px;
 	margin: 3px 0px 0px 6px;
@@ -201,7 +227,7 @@ wave {
 	font-style: italic;
 	font-weight: 600;
 }
-.container .top #calender .time {
+.container .top .s2 #calender .time {
 	left: 0px;
 	font-weight: 650;
 	color: #f39fd8;
@@ -211,7 +237,7 @@ wave {
 	justify-content: flex-end;
 	align-items: center;
 }
-.container .top #calender .time .clock {
+.container .top .s2 #calender .time .clock {
 	width: 3.35ex;
 	height: 3.35ex;
 	background: #f39fd8;
@@ -232,8 +258,18 @@ wave {
 	overflow: hidden;
 
 	display: flex;
-	justify-content: center;
-	align-items: flex-end;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+.container .bottom .tool .dot1,
+.container .bottom .tool .dot2 {
+	color: #fff;
+	font-size: 8px;
+	margin: 0px 2px;
+}
+.container .bottom .tool .active {
+	color: #b8b8b8;
 }
 .container .bottom .main {
 	position: relative;

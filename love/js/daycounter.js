@@ -43,19 +43,51 @@ const get_sec = (d1, d2) => {
 	ans = Math.ceil(sec2 - sec1);
 	return ans;
 };
-document.querySelector("#counter").addEventListener("click", change);
-document.querySelector("#calender").addEventListener("click", change);
-function change() {
-	let circle = document.getElementById("counter");
-	let date = document.getElementById("calender");
 
-	checker = circle.classList.contains("hide");
-	if (checker) {
-		date.classList.add("hide");
-		circle.classList.remove("hide");
+document.querySelector(".dot1").addEventListener("click", scrollLeft);
+document.querySelector(".dot2").addEventListener("click", scrollRight);
+function scrollLeft() {
+	let scroll = document.querySelector(".scroll");
+	var scrollAmount = 0;
+	scroll.scrollTo({
+		top: 0,
+		left: Math.min((scrollAmount -= 500), 0),
+		behavior: "smooth",
+	});
+}
+function scrollRight() {
+	let scroll = document.querySelector(".scroll");
+	var scrollAmount = 0;
+	scroll.scrollTo({
+		top: 0,
+		left: Math.max((scrollAmount += 500), 2000),
+		behavior: "smooth",
+	});
+}
+document.querySelector(".scroll").addEventListener("scroll", dot);
+function dot() {
+	let dot1 = document.querySelector(".dot1");
+	let dot2 = document.querySelector(".dot2");
+	let scroll = document.querySelector(".scroll");
+
+	if (scroll.scrollLeft == 0) {
+		dot1.classList.add("active");
+		dot2.classList.remove("active");
 	} else {
-		circle.classList.add("hide");
-		date.classList.remove("hide");
+		dot1.classList.remove("active");
+		dot2.classList.add("active");
+	}
+}
+
+document.querySelector(".s1").addEventListener("dblclick", change);
+document.querySelector(".s2").addEventListener("dblclick", change);
+function change() {
+	let scroll = document.querySelector(".scroll");
+
+	if (scroll.scrollLeft != 0) {
+		scrollLeft();
+	} else {
+		scrollRight();
 	}
 }
 function process() {
