@@ -68,37 +68,8 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-
-/* *Scroll */
-.container .top .scroll {
-	position: relative;
-	height: 51vw;
-	width: 100vw;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
-	scroll-snap-type: x mandatory;
-
-	display: flex;
-}
-.container .top .scroll .snap {
-	position: relative;
-	scroll-snap-align: start;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 /* *Counter */
-.container .top .s1 {
-	width: 100vw;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.container .top .s1 #counter {
+.container .top #counter {
 	position: absolute;
 	transition: transform 0.5s, opacity 0.3s;
 
@@ -106,8 +77,8 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top .s1 #counter .bg {
-	position: absolute;
+.container .top #counter .bg {
+	position: relative;
 	max-height: 260px;
 	height: 51vmin;
 	max-width: 260px;
@@ -120,7 +91,7 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top .s1 #counter .bg .process {
+.container .top #counter .bg .process {
 	position: absolute;
 	max-height: 235px;
 	height: 46vmin;
@@ -134,7 +105,7 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top .s1 #counter .dayCount {
+.container .top #counter .dayCount {
 	position: absolute;
 	max-height: 205px;
 	height: 40vmin;
@@ -148,51 +119,43 @@ wave {
 	align-items: center;
 	justify-content: center;
 }
-.container .top .s1 #counter .line1,
-.container .top .s1 #counter .line2 {
+.container .top #counter .line1,
+.container .top #counter .line2 {
 	font-size: 100%;
 	font-weight: 400;
 }
-.container .top .s1 #counter .line1 {
+.container .top #counter .line1 {
 	color: #f3aee9;
 	font-size: 0.95em;
 	font-weight: 400;
 }
-.container .top .s1 #counter .line2 {
+.container .top #counter .line2 {
 	color: #cf82e9;
 	font-size: 0.95em;
 	font-weight: 400;
 }
-.container .top .s1 #counter counter {
+.container .top #counter counter {
 	color: #3b3b3b;
 	font-size: 1.4em;
 	font-weight: 600;
 }
 /* *Calendar */
-.container .top .s2 {
-	width: 100vw;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.container .top .s2 #calender {
+.container .top #calender {
 	position: absolute;
 	cursor: url("/cursor/link.cur"), auto;
 	transition: transform 0.5s, opacity 0.3s;
 }
-.container .top .s2 #calender .date {
+.container .top #calender .date {
 	font-family: typewriter;
 
 	display: flex;
 	justify-content: center;
 	align-content: center;
 }
-.container .top .s2 #calender .date .y,
-.container .top .s2 #calender .date .m,
-.container .top .s2 #calender .date .w,
-.container .top .s2 #calender .date .d {
+.container .top #calender .date .y,
+.container .top #calender .date .m,
+.container .top #calender .date .w,
+.container .top #calender .date .d {
 	width: 20vmin;
 	max-width: 80px;
 	height: 20vmin;
@@ -207,10 +170,10 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top .s2 #calender .date .year,
-.container .top .s2 #calender .date .month,
-.container .top .s2 #calender .date .week,
-.container .top .s2 #calender .date .day {
+.container .top #calender .date .year,
+.container .top #calender .date .month,
+.container .top #calender .date .week,
+.container .top #calender .date .day {
 	background: #fff;
 	color: #d293f1;
 	border-radius: 50px;
@@ -223,7 +186,7 @@ wave {
 	justify-content: center;
 	align-items: center;
 }
-.container .top .s2 #calender .start {
+.container .top #calender .start {
 	position: absolute;
 	left: 0px;
 	margin: 3px 0px 0px 6px;
@@ -236,7 +199,7 @@ wave {
 	font-style: italic;
 	font-weight: 600;
 }
-.container .top .s2 #calender .time {
+.container .top #calender .time {
 	left: 0px;
 	font-weight: 650;
 	color: #f39fd8;
@@ -246,7 +209,7 @@ wave {
 	justify-content: flex-end;
 	align-items: center;
 }
-.container .top .s2 #calender .time .clock {
+.container .top #calender .time .clock {
 	width: 3.35ex;
 	height: 3.35ex;
 	background: #f39fd8;
@@ -266,22 +229,23 @@ wave {
 .container .bottom {
 	position: relative;
 	height: 45vh;
-	overflow: hidden;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
 }
-
-.container .bottom .tool .dot1,
-.container .bottom .tool .dot2 {
-	color: #fff;
+/* *Dots */
+.container .bottom .dot {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .bottom .dot .dot1,
+.container .bottom .dot .dot2 {
+	color: #ffffff43;
 	font-size: 8px;
 	margin: 0px 2px;
-}
-.container .bottom .tool .active {
-	color: #b8b8b8;
 }
 /* *Main */
 .container .bottom .main {

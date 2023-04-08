@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Days love</title>
 		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/action.css" />
 		<script
 			src="https://kit.fontawesome.com/6c218960be.js"
 			crossorigin="anonymous"
@@ -13,58 +14,48 @@
 	<body>
 		<div class="container">
 			<div class="top">
-				<div class="scroll">
-					<div class="snap">
-						<div class="s1">
-							<div id="counter">
-								<div class="bg">
-									<div class="process">
-										<ul class="dayCount">
-											<p class="line1">Yêu được tận</p>
-											<counter> 0 Ngày </counter>
-											<p class="line2">Rồi đấy</p>
-										</ul>
-									</div>
-								</div>
-							</div>
+				<div id="counter">
+					<div class="bg">
+						<div class="process">
+							<ul class="dayCount">
+								<p class="line1">Yêu được tận</p>
+								<counter> 0 Ngày </counter>
+								<p class="line2">Rồi đấy</p>
+							</ul>
 						</div>
 					</div>
-					<div class="snap">
-						<div class="s2">
-							<div id="calender">
-								<div class="date">
-									<div class="y">
-										<div id="year">0</div>
-										<div class="year">&nbspNăm&nbsp</div>
-									</div>
-									<div class="m">
-										<div id="month">0</div>
-										<div class="month">&nbspTháng&nbsp</div>
-									</div>
-									<div class="w">
-										<div id="week">0</div>
-										<div class="week">&nbspTuần&nbsp</div>
-									</div>
-									<div class="d">
-										<div id="day">0</div>
-										<div class="day">&nbspNgày&nbsp</div>
-									</div>
-								</div>
-								<div class="start">00/00/0000</div>
-								<div class="time">
-									<div class="clock">00</div>
-									:
-									<div class="clock">00</div>
-									:
-									<div class="clock">00</div>
-								</div>
-							</div>
+				</div>
+				<div id="calender" class="hide">
+					<div class="date">
+						<div class="y">
+							<div id="year">0</div>
+							<div class="year">&nbspNăm&nbsp</div>
 						</div>
+						<div class="m">
+							<div id="month">0</div>
+							<div class="month">&nbspTháng&nbsp</div>
+						</div>
+						<div class="w">
+							<div id="week">0</div>
+							<div class="week">&nbspTuần&nbsp</div>
+						</div>
+						<div class="d">
+							<div id="day">0</div>
+							<div class="day">&nbspNgày&nbsp</div>
+						</div>
+					</div>
+					<div class="start">00/00/0000</div>
+					<div class="time">
+						<div class="clock">00</div>
+						:
+						<div class="clock">00</div>
+						:
+						<div class="clock">00</div>
 					</div>
 				</div>
 			</div>
 			<div class="bottom">
-				<div class="tool">
+				<div class="dot">
 					<i class="fa-solid fa-circle dot1 active"></i
 					><i class="fa-solid fa-circle dot2"></i>
 				</div>
@@ -100,6 +91,8 @@
 			</div>
 		</div>
 	</body>
+	<script src="js/variable.js"></script>
+	<script src="js/scripts.js"></script>
 	<script src="js/cung.js"></script>
-	<script src="js/daycounter.js"></script>
+	<script src="js/counter.js"></script>
 </html>

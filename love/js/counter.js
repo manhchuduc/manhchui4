@@ -1,25 +1,3 @@
-var ngayyeu = "03/28/2023 00:00:00"; // MM/DD/YYYY h/m/s VD:"30/07/2023 13:30:00"
-document.addEventListener("contextmenu", (event) => event.preventDefault());
-document.onkeydown = function (e) {
-	if (e.keyCode == 123) {
-		return false;
-	}
-
-	// disable I key
-	if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-		return false;
-	}
-
-	// disable J key
-	if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-		return false;
-	}
-
-	// disable U key
-	if (e.ctrlKey && e.keyCode == 85) {
-		return false;
-	}
-};
 const get_day_of_time = (d1, d2) => {
 	let ms1 = d1.getTime();
 	let ms2 = d2.getTime();
@@ -44,56 +22,6 @@ const get_sec = (d1, d2) => {
 	return ans;
 };
 
-document.querySelector(".dot1").addEventListener("click", scrollLeft);
-document.querySelector(".dot2").addEventListener("click", scrollRight);
-function scrollLeft() {
-	let scroll = document.querySelector(".scroll");
-	var scrollAmount = scroll.scrollLeft;
-
-	scroll.scrollTo({
-		top: 0,
-		left: Math.min((scrollAmount -= 1), 0),
-		behavior: "smooth",
-	});
-}
-function scrollRight() {
-	let scroll = document.querySelector(".scroll");
-	var scrollAmount = scroll.scrollLeft;
-	var maxScrollAmount = scroll.clientWidth;
-
-	scroll.scrollTo({
-		top: 0,
-		left: Math.max((scrollAmount += 1), maxScrollAmount),
-		behavior: "smooth",
-	});
-}
-document.querySelector(".scroll").addEventListener("scroll", dot);
-function dot() {
-	let dot1 = document.querySelector(".dot1");
-	let dot2 = document.querySelector(".dot2");
-	let scroll = document.querySelector(".scroll");
-	var maxScrollAmount = scroll.clientWidth;
-
-	if (scroll.scrollLeft <= maxScrollAmount / 2) {
-		dot1.classList.add("active");
-		dot2.classList.remove("active");
-	} else if (scroll.scrollLeft >= maxScrollAmount / 2) {
-		dot1.classList.remove("active");
-		dot2.classList.add("active");
-	}
-}
-
-document.querySelector(".s1").addEventListener("dblclick", change);
-document.querySelector(".s2").addEventListener("dblclick", change);
-function change() {
-	let scroll = document.querySelector(".scroll");
-
-	if (scroll.scrollLeft != 0) {
-		scrollLeft();
-	} else {
-		scrollRight();
-	}
-}
 function process() {
 	let ele = document.querySelector(".process");
 	let when = new Date(ngayyeu);

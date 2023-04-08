@@ -1,0 +1,9 @@
+#counter.hide {
+	transform: translateX(-100vw);
+}
+#calender.hide {
+	transform: translateX(100vw);
+}
+.container .bottom .dot .active {
+	color: #fff;
+}

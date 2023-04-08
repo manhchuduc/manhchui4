@@ -1,8 +1,3 @@
-var ngaysinh1 = "04/29/2009";
-var gioitinh1 = "nam";
-var ngaysinh2 = "04/29/2009";
-var gioitinh2 = "nu";
-
 function checkcung(ns) {
 	let ngaysinh = new Date(ns);
 
