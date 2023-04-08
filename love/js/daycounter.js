@@ -48,19 +48,22 @@ document.querySelector(".dot1").addEventListener("click", scrollLeft);
 document.querySelector(".dot2").addEventListener("click", scrollRight);
 function scrollLeft() {
 	let scroll = document.querySelector(".scroll");
-	var scrollAmount = 0;
+	var scrollAmount = scroll.scrollLeft;
+
 	scroll.scrollTo({
 		top: 0,
-		left: Math.min((scrollAmount -= 500), 0),
+		left: Math.min((scrollAmount -= 1), 0),
 		behavior: "smooth",
 	});
 }
 function scrollRight() {
 	let scroll = document.querySelector(".scroll");
-	var scrollAmount = 0;
+	var scrollAmount = scroll.scrollLeft;
+	var maxScrollAmount = scroll.clientWidth;
+
 	scroll.scrollTo({
 		top: 0,
-		left: Math.max((scrollAmount += 500), 2000),
+		left: Math.max((scrollAmount += 1), maxScrollAmount),
 		behavior: "smooth",
 	});
 }
@@ -69,11 +72,12 @@ function dot() {
 	let dot1 = document.querySelector(".dot1");
 	let dot2 = document.querySelector(".dot2");
 	let scroll = document.querySelector(".scroll");
+	var maxScrollAmount = scroll.clientWidth;
 
-	if (scroll.scrollLeft == 0) {
+	if (scroll.scrollLeft <= maxScrollAmount / 2) {
 		dot1.classList.add("active");
 		dot2.classList.remove("active");
-	} else {
+	} else if (scroll.scrollLeft >= maxScrollAmount / 2) {
 		dot1.classList.remove("active");
 		dot2.classList.add("active");
 	}
