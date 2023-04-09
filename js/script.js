@@ -26,7 +26,7 @@ document.getElementById("tt").addEventListener("click", tt);
 document.getElementById("ig").addEventListener("click", ig);
 document.getElementById("gh").addEventListener("click", gh);
 function fb() {
-	window.open("https://www.facebook.com/100090568388319");
+	window.open("https://www.facebook.com/chuducmanh2904");
 }
 function tt() {
 	window.open("https://www.tiktok.com/@m_a_n_h_c_h_u");
