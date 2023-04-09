@@ -19,6 +19,8 @@ document.onkeydown = function (e) {
 		return false;
 	}
 };
+
+// !Links
 document.getElementById("fb").addEventListener("click", fb);
 document.getElementById("tt").addEventListener("click", tt);
 document.getElementById("ig").addEventListener("click", ig);
@@ -38,6 +40,8 @@ function gh() {
 function lovepage() {
 	window.open("love");
 }
+// !Links
+
 document.getElementById("darkmodebut").addEventListener("click", darkmode);
 document.getElementById("lovepage").addEventListener("click", lovepage);
 document.getElementById("avatar").addEventListener("click", avt);
