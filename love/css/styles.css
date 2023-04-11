@@ -33,7 +33,7 @@ body {
 }
 wave {
 	position: absolute;
-	background: url(../svg/wave1.svg) repeat;
+	background: url(../svg/wave.svg) repeat;
 	background-position: left;
 	background-repeat: no-repeat;
 	width: 100%;

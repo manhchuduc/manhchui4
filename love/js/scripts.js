@@ -269,7 +269,7 @@ function clock() {
 		whenmonth = "0" + whenmonth;
 	}
 
-	start.innerHTML = `${whenday}/${whenmonth}/${whenyear}`;
+	start.innerHTML = `${whenday}-${whenmonth}-${whenyear}`;
 
 	let hour = get_hour(when, todate);
 	let min = get_min(when, todate);
