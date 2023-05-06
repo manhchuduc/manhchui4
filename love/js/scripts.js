@@ -135,10 +135,10 @@ function info() {
 	cung1.innerHTML = checkcung(ngaysinh1);
 	cung2.innerHTML = checkcung(ngaysinh2);
 	sex1.innerHTML = `<div class="sex1">&nbsp<div class="nam">${Math.ceil(
-		time1 / 365
+		time1 / 365 - 1
 	)}${sex(gioitinh1)}</div>&nbsp</div>`;
 	sex2.innerHTML = `<div class="sex2">&nbsp<div class="nu">${Math.ceil(
-		time2 / 365
+		time2 / 365 - 1
 	)}${sex(gioitinh2)}</div>&nbsp</div>`;
 	sn1.innerHTML = `${day1}-${month1}-${year1}`;
 	sn2.innerHTML = `${day2}-${month2}-${year2}`;
