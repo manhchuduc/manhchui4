@@ -32,7 +32,7 @@ function tt() {
 	window.open("https://www.tiktok.com/@m_a_n_h_c_h_u");
 }
 function ig() {
-	window.open("https://www.instagram.com/chumanhhh");
+	window.open("https://www.instagram.com/_manhchu_");
 }
 function gh() {
 	window.open("https://github.com/manhchuduc");
