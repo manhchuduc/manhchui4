@@ -16,7 +16,7 @@ body {
 	font-family: manh;
 	color: #f5f5f5;
 	overflow: hidden;
-	cursor: url("/cursor/pointer.cur"), auto;
+	cursor: url("../cursor/pointer.cur"), auto;
 	padding: 20px;
 
 	display: flex;
@@ -142,7 +142,7 @@ wave {
 /* *Calendar */
 .container .top #calender {
 	position: absolute;
-	cursor: url("/cursor/link.cur"), auto;
+	cursor: url("../cursor/link.cur"), auto;
 	transition: transform 0.5s, opacity 0.3s;
 }
 .container .top #calender .date {
