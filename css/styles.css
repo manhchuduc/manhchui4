@@ -10,6 +10,9 @@
 	-o-user-select: none;
 	user-select: none;
 }
+html {
+	overflow: hidden;
+}
 body {
 	background-image: url("../photos/bg-light.jpg");
 	transition: 0.5s;
@@ -25,9 +28,10 @@ body::before {
 	position: absolute;
 	content: "";
 	background: #ffffff75;
-	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(7px);
+	backdrop-filter: blur(7px);
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	transition: 0.5s, width 0s, height 0s;
 }
 a {

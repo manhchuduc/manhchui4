@@ -1,203 +1,32 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-* {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-}
-::-webkit-scrollbar {
-	width: 0;
-	display: none;
-}
-html {
-	overflow: hidden;
-}
 body {
-	position: relative;
-	background: #e0e5ec;
-	font-family: typewriter;
+	background: url(../images/bgg.png);
+	background-position: center;
 
 	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-}
-.container {
-	width: 100%;
-	max-width: 750px;
-	height: 100%;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-}
-.container .site {
-	height: 100%;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-}
-.container .site h1.title {
-	font-family: "Open Sans";
-	text-align: center;
-	margin: 20px;
-	color: #353535;
-}
-.container .site .buttools {
-	width: 100%;
-
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
 	justify-content: center;
-	align-items: flex-start;
-	gap: 15px;
+	cursor: url("../cursor/pointer.cur"), auto;
 }
-.container .site .buttools button {
-	position: relative;
-	background: transparent;
-	border: #8b8b8b solid 2px;
-	width: 40vmin;
-	min-width: 160px;
-	max-width: 205px;
-	height: 16vmin;
-	min-height: 65px;
-	max-height: 80px;
-	box-shadow: #8b8b8b 1px 3px 2px 1px;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.container .site .buttools button:hover {
-	transform: translate(1px, 3px);
-	box-shadow: none;
-}
-.container .site .buttools button h1 {
+body::before {
 	position: absolute;
-	color: #303030;
-	font-size: 1.3em;
-	font-family: "Open Sans";
-}
-.container blur {
-	position: absolute;
-	width: 100%;
-	height: 100%;
+	content: "";
+	background: #ffffff18;
+	-webkit-backdrop-filter: blur(7px);
 	backdrop-filter: blur(7px);
-	transition: 0.5s;
-	opacity: 1;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	width: 100vw;
+	height: 100%;
+	transition: 0.5s, width 0s, height 0s;
 }
-.container blur .xemthu,
-.container blur .demngay {
+body .content {
 	position: relative;
 	width: 100vw;
-	height: 100vh;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 100%;
 }
-.container blur .tool {
-	position: relative;
-	background: #e0e5ec;
-	width: 80%;
-	height: 80%;
-	box-shadow: #00000030 3px 3px 10px;
-	border-radius: 30px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.container blur .tool #close {
-	position: absolute;
-	width: 7vmin;
-	max-width: 35px;
-	height: 7vmin;
-	max-height: 35px;
-	top: 0;
-	right: 0;
-	color: #303030;
-	font-size: 20px;
-	margin: 5px;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.container blur .tool .get {
-	position: relative;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.container blur .tool .get label {
-	font-size: 2.5em;
+body .content h1 {
 	text-align: center;
-}
-.container blur .tool .get input {
-	font-family: num;
-	background: #fff;
-	border: transparent;
-	border-radius: 5px;
-	width: 50vmin;
-	max-width: 250px;
-	height: 8vmin;
-	max-height: 40px;
-	font-size: 1em;
-	margin: 15px 0 10px 0;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.container blur .tool .get button {
-	background: #fff;
-	border: transparent;
-	border-radius: 5px;
-	width: 50vmin;
-	max-width: 250px;
-	height: 8vmin;
-	max-height: 40px;
-	margin: 15px 0 0 0;
-}
-.container blur .tool #result {
-	background: #fff;
-	border: transparent;
-	border-radius: 7px;
-	width: 60vmin;
-	max-width: 270px;
-	margin: 15px 0 0 0;
-	padding: 5px;
-}
-.container blur .tool #result h1 {
-	font-size: 1em;
-	text-align: center;
-}
-@font-face {
-	font-family: typewriter;
-	src: url(../../love/fonts/font1.otf);
-}
-@font-face {
-	font-family: num;
-	src: url(../../love/fonts/Underwood319.ttf);
-}
-.remove {
-	transform: translateY(110vh);
+	font-family: roboto;
+	font-size: 1.8em;
+	color: #ebebeb;
 }
