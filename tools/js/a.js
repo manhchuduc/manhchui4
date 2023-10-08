@@ -7,7 +7,7 @@ function randompass(length) {
 	if (num) {
 		chars += number;
 	}
-	var special = "!@#$%^&*()-_=+,./;'[]<>?:";
+	var special = "!@#$%^&*()-_=+,./;[]<>?:";
 	if (spe) {
 		chars += special;
 	}
