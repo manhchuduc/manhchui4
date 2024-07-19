@@ -74,7 +74,7 @@ function darkmode() {
 		document.body.classList.add("dark");
 		localStorage.setItem("darkmode", true);
 	}
-	darkBut[0].style.setProperty("transform", "translateY(6vw)");
+	darkBut[0].style.setProperty("transform", "translateY(6vh)");
 	darkBut[1].style.setProperty("transform", "none", "important");
 	setTimeout(() => {
 		darkBut[0].outerHTML = bDOuter2;

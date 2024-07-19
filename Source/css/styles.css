@@ -92,10 +92,11 @@ a:hover {
 }
 #darkmodebut i {
 	position: absolute;
+	font-size: 1em;
 	transition: all 0.5s cubic-bezier(0, 0.25, 0.25, 1), color 0s;
 }
 #darkmodebut i:last-child {
-	transform: translateY(-6vw);
+	transform: translateY(-6vh);
 }
 #darkmodebut:hover {
 	background: #e4e3e3;
