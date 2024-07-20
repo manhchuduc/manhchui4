@@ -66,8 +66,8 @@ function darkmode() {
 	const bDOuter1 = darkBut[0].outerHTML;
 	const bDOuter2 = darkBut[1].outerHTML;
 	if (check === "true") {
+		document.body.classList.remove("dark");
 		localStorage.setItem("darkmode", false);
-		localStorage.removeItem("darkmode");
 	} else {
 		document.body.classList.add("dark");
 		localStorage.setItem("darkmode", true);
