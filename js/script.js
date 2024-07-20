@@ -49,7 +49,7 @@ function check() {
 	const check = localStorage.getItem("darkmode");
 	const sun = '<i class="fa-solid fa-sun"></i>';
 	const moon = '<i class="fa-solid fa-moon"></i>';
-	if (check) {
+	if (check === "true") {
 		document.body.classList.add("dark");
 		darkBut[0].outerHTML = moon;
 		darkBut[1].outerHTML = sun;
@@ -65,7 +65,7 @@ function darkmode() {
 
 	const bDOuter1 = darkBut[0].outerHTML;
 	const bDOuter2 = darkBut[1].outerHTML;
-	if (check) {
+	if (check === "true") {
 		localStorage.setItem("darkmode", false);
 		localStorage.removeItem("darkmode");
 	} else {
