@@ -49,14 +49,10 @@ function check() {
 	const check = localStorage.getItem("darkmode");
 	const sun = '<i class="fa-solid fa-sun"></i>';
 	const moon = '<i class="fa-solid fa-moon"></i>';
-	if (check === "true") {
+	if (check) {
 		document.body.classList.add("dark");
 		darkBut[0].outerHTML = moon;
 		darkBut[1].outerHTML = sun;
-	} else {
-		document.body.classList.add("dark");
-		darkBut[0].outerHTML = sun;
-		darkBut[1].outerHTML = moon;
 	}
 }
 function darkmode() {
@@ -65,9 +61,9 @@ function darkmode() {
 
 	const bDOuter1 = darkBut[0].outerHTML;
 	const bDOuter2 = darkBut[1].outerHTML;
-	if (check === "true") {
+	if (check) {
 		document.body.classList.remove("dark");
-		localStorage.setItem("darkmode", false);
+		localStorage.removeItem("darkmode");
 	} else {
 		document.body.classList.add("dark");
 		localStorage.setItem("darkmode", true);
