@@ -42,9 +42,8 @@ function lovepage() {
 }
 // !Links
 
-document.getElementById("darkmodebut").addEventListener("click", darkmode);
-document.getElementById("lovepage").addEventListener("click", lovepage);
-document.getElementById("avatar").addEventListener("click", avt);
+const darkModeBut = document.getElementById("darkmodebut");
+// document.getElementById("lovepage").addEventListener("click", lovepage);
 function check() {
 	const darkBut = document.querySelectorAll("#darkmodebut > i.fa-solid");
 	const check = localStorage.getItem("darkmode");
@@ -60,7 +59,6 @@ function check() {
 		darkBut[1].outerHTML = moon;
 	}
 }
-check();
 function darkmode() {
 	const darkBut = document.querySelectorAll("#darkmodebut > i.fa-solid");
 	const check = localStorage.getItem("darkmode");
@@ -76,12 +74,19 @@ function darkmode() {
 	}
 	darkBut[0].style.setProperty("transform", "translateY(6vh)");
 	darkBut[1].style.setProperty("transform", "none", "important");
+	darkModeBut.removeEventListener("click", darkmode);
 	setTimeout(() => {
 		darkBut[0].outerHTML = bDOuter2;
 		darkBut[1].outerHTML = bDOuter1;
-	}, 500);
+		darkModeBut.addEventListener("click", darkmode);
+	}, 300);
 }
 function avt() {
 	var element = document.getElementById("avatar");
 	element.classList.toggle("rotate");
 }
+document.addEventListener("DOMContentLoaded", () => {
+	check();
+	darkModeBut.addEventListener("click", darkmode);
+	document.getElementById("avatar").addEventListener("click", avt);
+});
