@@ -81,8 +81,80 @@ function avt() {
 	var element = document.getElementById("avatar");
 	element.classList.toggle("rotate");
 }
+function hoverEffect(elementsId = ["fb", "tt", "ig", "gh"]) {
+	document.addEventListener("touchmove", (e) => {
+		let elePos = {};
+		elementsId.forEach((id) => {
+			let top = document.getElementById(id).getBoundingClientRect().top;
+			let right = document.getElementById(id).getBoundingClientRect().right;
+			let bottom = document.getElementById(id).getBoundingClientRect().bottom;
+			let left = document.getElementById(id).getBoundingClientRect().left;
+			elePos[id] = { top: top, right: right, bottom: bottom, left: left };
+		});
+
+		elementsId.forEach((id) => {
+			let ele = document.getElementById(id);
+			let clX = e.touches[0].clientX;
+			let clY = e.touches[0].clientY;
+			let rect = elePos[id];
+			if (ele.classList.contains("touch")) {
+				if (
+					clX < rect.left ||
+					clX > rect.right ||
+					clY < rect.top ||
+					clY > rect.bottom
+				) {
+					ele.classList.remove("touch");
+				}
+			} else {
+				if (
+					clX >= rect.left &&
+					clX <= rect.right &&
+					clY >= rect.top &&
+					clY <= rect.bottom
+				) {
+					ele.classList.add("touch");
+				}
+			}
+		});
+	});
+	document.addEventListener("touchstart", (e) => {
+		let elePos = {};
+		elementsId.forEach((id) => {
+			document.getElementById(id).classList.add("no-hover");
+			let top = document.getElementById(id).getBoundingClientRect().top;
+			let right = document.getElementById(id).getBoundingClientRect().right;
+			let bottom = document.getElementById(id).getBoundingClientRect().bottom;
+			let left = document.getElementById(id).getBoundingClientRect().left;
+			elePos[id] = { top: top, right: right, bottom: bottom, left: left };
+		});
+
+		elementsId.forEach((id) => {
+			let ele = document.getElementById(id);
+			let clX = e.touches[0].clientX;
+			let clY = e.touches[0].clientY;
+			let rect = elePos[id];
+			if (!ele.classList.contains("touch")) {
+				if (
+					clX >= rect.left &&
+					clX <= rect.right &&
+					clY >= rect.top &&
+					clY <= rect.bottom
+				) {
+					ele.classList.add("touch");
+				}
+			}
+		});
+	});
+	document.addEventListener("touchend", () => {
+		elementsId.forEach((id) =>
+			document.getElementById(id).classList.remove("touch")
+		);
+	});
+}
 document.addEventListener("DOMContentLoaded", () => {
 	check();
 	darkModeBut.addEventListener("click", darkmode);
 	document.getElementById("avatar").addEventListener("click", avt);
+	hoverEffect();
 });
